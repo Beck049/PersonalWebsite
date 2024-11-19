@@ -4,7 +4,7 @@ import WelcomeHead from '../components/WelcomeHead.vue'
 
 <template>
   <WelcomeHead />
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div class="home">
+    <h1>This is an Portfolio page</h1>
   </div>
 </template>
