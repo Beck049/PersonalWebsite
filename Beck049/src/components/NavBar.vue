@@ -57,8 +57,8 @@
   }
   
   .container {
-    max-width: 1200px; /* Set max content width */
-    margin: 0 auto; /* Center content horizontally */
+    max-width: 1800px; /* Set max content width */
+    margin: 0; /* Center content horizontally */
     display: flex;
     justify-content: space-between; /* Space between logo and right side (contact + links) */
     align-items: center;

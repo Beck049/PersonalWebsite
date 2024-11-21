@@ -11,4 +11,7 @@ import NavBar from './components/NavBar.vue'
 </template>
 
 <style scoped>
+.router_view {
+  width: 100vw;
+}
 </style>

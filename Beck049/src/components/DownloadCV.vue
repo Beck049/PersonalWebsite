@@ -1,0 +1,55 @@
+<template>
+    <button class="download-btn" @click="downloadCV">
+      <p>Download CV</p>
+      <img src="./icons/Download.png" alt="Download Icon" class="icon" />
+    </button>
+  </template>
+  
+  <script>
+  export default {
+    methods: {
+      downloadCV() {
+        // Replace this URL with the actual path to the CV file you want to download
+        const fileUrl = "./icons/Download.png";
+        const link = document.createElement("a");
+        link.href = fileUrl;
+        link.download = "CV.png"; // Specify the default download filename
+        link.click();
+      },
+    },
+  };
+  </script>
+  
+  <style scoped>
+  .download-btn {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 20px;
+    color: #00c4cc;
+    background: transparent;
+    border: 2px solid #00c4cc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 30px;
+  }
+
+  .download-btn:hover {
+    background-color: #00c4cc;
+    color: #fff;
+    transform: scale(1.1);
+  }
+
+  .download-btn p{
+    font-weight: bolder;
+  }
+
+  .icon {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    justify-content: flex-end;
+  }
+  </style>
+  
