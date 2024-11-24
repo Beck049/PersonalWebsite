@@ -1,10 +1,21 @@
 <script setup lang="ts">
-import WelcomeHead from '../components/WelcomeHead.vue'
+import ServiceList from '../components/ServiceList.vue'
 </script>
-
 <template>
-  <WelcomeHead />
-  <div class="home">
-    <h1>This is an Service List</h1>
+  <div class="service-list">
+    <h1>Service List</h1>
+    <ServiceList />
   </div>
 </template>
+
+<style scoped>
+.service-list {
+  padding: 3rem;
+}
+h1 {
+  font-size: 60px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+</style>
