@@ -1,10 +1,21 @@
 <script setup lang="ts">
-import WelcomeHead from '../components/WelcomeHead.vue'
+import ProjectList from '../components/ProjectList.vue'
 </script>
-
 <template>
-  <WelcomeHead />
-  <div class="home">
-    <h1>This is an Project List</h1>
+  <div class="project-list">
+    <h1>Project List</h1>
+    <ProjectList />
   </div>
 </template>
+
+<style scoped>
+.project-list {
+  padding: 3rem;
+}
+h1 {
+  font-size: 60px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+</style>
