@@ -1,8 +1,20 @@
 @import './base.css';
 
+:root {
+  --bg-color-1: #11071F;
+  --bg-color-2: #422072;
+  --primary: #763CAC;
+  --secondary: #AF6EE7;
+  --tertiary: #C778DD;
+  --accent-1: #AA86DD;
+  --accent-2: #E9DEFF;
+  --gray-text: #D9D9D9;
+  --black-text: #202F2F;
+}
+
 #app {
   max-width: 1800px;
-  margin: 70px 0px 0px 0px;
+  margin: 65px 0px 0px 0px;
   font-weight: normal;
 }
 
