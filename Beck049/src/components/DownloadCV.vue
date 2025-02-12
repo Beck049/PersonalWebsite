@@ -24,11 +24,11 @@
   .download-btn {
     display: flex;
     align-items: center;
-    padding: 10px 20px;
+    padding: 12px 12px;
     font-size: 20px;
-    color: #00c4cc;
-    background: transparent;
-    border: 2px solid #00c4cc;
+    color: var(--accent-1);
+    background: #DCDCDC30;
+    border: 2px solid var(--accent-1);
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -36,8 +36,8 @@
   }
 
   .download-btn:hover {
-    background-color: #00c4cc;
-    color: #fff;
+    background-color: var(--secondary);
+    color: var(--gray-text);
     transform: scale(1.1);
   }
 

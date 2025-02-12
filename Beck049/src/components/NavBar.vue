@@ -7,7 +7,6 @@
           <li><RouterLink to="/portfolio">Portfolio</RouterLink></li>
           <li><RouterLink to="/project">Projects</RouterLink></li>
           <li><RouterLink to="/service">Services</RouterLink></li>
-            <li><RouterLink to="/about">About</RouterLink></li>
         </ul>
         <button class="contact-button">Contact Me</button>
       </div>
@@ -46,14 +45,13 @@
     top: 0;
     left: 0;
     width: 100%; /* Full width of the screen */
-    background-color: #4a4a4a;
-    color: white;
+    background-color: var(--primary);
     transition: transform 0.3s ease-in-out;
     z-index: 1000;
   }
   
   .navbar.hidden {
-    transform: translateY(-100%);
+    transform: translateY(-100%);                                                   
   }
   
   .container {
@@ -67,7 +65,8 @@
   
   .logo {
     font-weight: bold;
-    font-size: 1.5em;
+    font-size: 1.6rem;
+    color: var(--gray-text);
     text-align: left; /* Ensure it aligns to the left within container */
   }
 
@@ -87,24 +86,25 @@
   
   .nav-links li a {
     text-decoration: none;
-    color: white;
-    font-size: 1em;
+    color: var(--gray-text);
+    font-size: 1.2rem;
   }
   
   .contact-button {
-    background-color: #00c8ff;
+    background-color: var(--accent-1);
     border: none;
-    padding: 10px 15px;
-    color: white;
-    border-radius: 5px;
-    font-size: 1em;
-    font-weight: bold;
+    padding: 6px 10px;
+    color: var(--black-text);
+    opacity: 0.8;
+    border-radius: 20px;
+    font-size: 1.2rem;
     cursor: pointer;
     margin-left: 10px; /* Add space between nav-links and button */
   }
   
   .contact-button:hover {
-    background-color: #00a3cc;
+    background-color: var(--accent-1);
+    opacity: 1;
   }
   </style>
   

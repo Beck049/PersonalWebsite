@@ -32,7 +32,8 @@
     align-items: center;
     width: 45px;
     height: 45px;
-    border: 2px solid #00c4cc; /* Optional border styling */
+    background: #DCDCDC30;
+    border: 2px solid var(--accent-1); /* Optional border styling */
     border-radius: 50%;
     transition: transform 0.2s ease-in-out;
   }
@@ -42,8 +43,8 @@
   }
   
   .icon {
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
     object-fit: contain;
   }
   </style>
