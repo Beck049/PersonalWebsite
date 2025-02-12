@@ -69,16 +69,16 @@
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Dynamic columns */
     gap: 20px; /* Spacing between grid items */
     padding: 20px;
-    background-color: #333; /* Matches your color scheme */
     border-radius: 15px;
   }
   
   /* Individual Cards */
   .service-card {
-    background: #444; /* Card background */
-    color: #fff; /* Text color */
+    background: var(--primary); /* Card background */
+    color: var(--gray-text); /* Text color */
+    opacity: 0.6;
     border-radius: 10px;
-    padding: 15px;
+    padding: 45px 30px;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for the cards */
   }

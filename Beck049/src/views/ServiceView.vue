@@ -2,14 +2,14 @@
 import ServiceList from '../components/ServiceList.vue'
 </script>
 <template>
-  <div class="service-list">
+  <div class="service">
     <h1>Service List</h1>
     <ServiceList />
   </div>
 </template>
 
 <style scoped>
-.service-list {
+.service {
   padding: 3rem;
 }
 h1 {
