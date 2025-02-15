@@ -46,7 +46,7 @@
     left: 0;
     width: 100%; /* Full width of the screen */
     background-color: var(--primary);
-    transition: transform 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
     z-index: 1000;
   }
   

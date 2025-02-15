@@ -23,6 +23,8 @@
   
   <style scoped>
   .icon-link {
+    display: flex;
+    flex-wrap: wrap;
     text-decoration: none;
   }
   
