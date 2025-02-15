@@ -121,6 +121,7 @@ p {
   display: flex;
   align-items: center;
   gap: 1.5rem;
+  margin: 2rem 0rem;
 }
 
 .social-icons{
