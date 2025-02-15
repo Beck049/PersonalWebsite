@@ -168,7 +168,6 @@ export default {
       this.isHidden = currentScrollPosition > this.lastPosition && currentScrollPosition > 50;
       this.positionY = this.isHidden? currentScrollPosition -70: currentScrollPosition;
       this.lastPosition = currentScrollPosition;
-      console.log(this.positionY, this.isHidden);
     },
   },
   mounted() {
