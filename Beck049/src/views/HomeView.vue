@@ -2,10 +2,13 @@
 import { ref, onMounted } from "vue"
 import DownloadCV from '../components/DownloadCV.vue'
 import SocialMediaLink from '../components/SocialMediaLink.vue'
+import ContentCard from '../components/ContentCard.vue'
 
 const titles = ["Frontend Developer", "Fullstack Developer"];
+const technologies = ["a", "b", "c", "b", "c", "b", "c", "b", "c"];
 const displayText = ref("");
 let i = 0, j = 0, isDeleting = false;
+let floatId = 0;
 
 const typeEffect = () => {
   const curTitle = titles[i];
@@ -27,8 +30,14 @@ const typeEffect = () => {
   setTimeout(typeEffect, speed);
 };
 
+const setFloat = () => {
+  setTimeout(setFloat, 2000);
+  floatId = (floatId+1) % technologies.length;
+}
+
 onMounted(() => {
   typeEffect();
+  setFloat();
 });
 
 </script>
@@ -61,11 +70,18 @@ onMounted(() => {
   </div>
   <div class="what-i-do">
     <h2># What I do</h2>
-    <div></div>
+    <div class="what-i-do-list">
+      <div class="what-i-do-list">
+        <ContentCard /><ContentCard /><ContentCard />
+      </div>
+    </div>
   </div>
   <div class="tech-stack">
-    <h2># My Tach Stack</h2>
-    <div></div>
+    <h2># My Tech Stack</h2>
+    <div class="tech-stack-list">
+      <div  class="tech-stack-box" :class="{floatUp: index===floatId, }"
+            v-for="(_, index) in technologies" :key="index"/>
+    </div>
   </div>
 </template>
 
@@ -149,6 +165,20 @@ p {
   width: 100%;
   background-color: var(--bg-color-2);
   padding: 2.5rem;
+
+  flex-direction: column;
+  gap: 20px;
+}
+.what-i-do-list {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+.what-i-do-list > * {
+  flex: 1 1 calc(30% - 20px); /* 每個卡片佔 1/3，減去 gap */
 }
 
 .tech-stack {
@@ -156,5 +186,27 @@ p {
   width: 100%;
   background-color: var(--bg-color-1);
   padding: 2.5rem;
+
+  flex-direction: column;
+  gap: 20px;
 }
+.tech-stack-list {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+.tech-stack-box {
+  width: 64px;
+  height: 64px;
+  border: 2px solid var(--gray-text);
+  border-radius: 8px;
+  box-shadow: 5px 5px 18px var(--primary);
+  transition: transform 1s ease-in-out;
+}
+.floatUp {
+  transform: translateY(-10px);
+}
+
 </style>
