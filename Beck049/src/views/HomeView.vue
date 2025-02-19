@@ -59,6 +59,14 @@ onMounted(() => {
       <!-- Add content here if needed, or leave it as a styled empty block -->
     </div>
   </div>
+  <div class="what-i-do">
+    <h2># What I do</h2>
+    <div></div>
+  </div>
+  <div class="tech-stack">
+    <h2># My Tach Stack</h2>
+    <div></div>
+  </div>
 </template>
 
 <style scoped>
@@ -66,7 +74,7 @@ onMounted(() => {
   display: flex;
   height: 100vh;
   width: 100%;
-  background-color: var(--background-1);
+  background-color: var(--bg-color-1);
 }
 
 .left-block, .right-block {
@@ -77,14 +85,15 @@ onMounted(() => {
 
 .right-block {
   background-color: #444;
+  opacity: 0.5;
 }
 
-@media (max-width: 1200px) {
-  .portfolio-container {
-    flex-direction: column; /* Stack elements vertically */
+@media (max-width: 980px) {
+  .right-block {
+    display: none; /* Stack elements vertically */
   }
 
-  .left-block, .right-block {
+  .left-block {
     flex: none; /* Prevent stretching */
     width: 100%; /* Make each block take full width */
     height: 100%;
@@ -133,5 +142,19 @@ p {
   font-size: 1.5rem;
   margin-right: 0.5rem;
   cursor: pointer;
+}
+
+.what-i-do {
+  display: flex;
+  width: 100%;
+  background-color: var(--bg-color-2);
+  padding: 2.5rem;
+}
+
+.tech-stack {
+  display: flex;
+  width: 100%;
+  background-color: var(--bg-color-1);
+  padding: 2.5rem;
 }
 </style>

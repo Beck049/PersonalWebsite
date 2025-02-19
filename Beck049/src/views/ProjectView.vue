@@ -44,6 +44,7 @@ export default {
   flex-direction: column;
   justify-content: flex-start;
   padding-top: 3rem;
+  background: var(--bg-color-1);
 }
 h1 {
   font-size: 60px;

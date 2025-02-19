@@ -11,6 +11,7 @@ import ServiceList from '../components/ServiceList.vue'
 <style scoped>
 .service {
   padding: 3rem;
+  background: var(--bg-color-1);
 }
 h1 {
   font-size: 60px;

@@ -186,6 +186,7 @@ export default {
   flex-wrap: wrap;
   gap: 20px;
   padding: 20px;
+  background: var(--bg-color-1);
 }
 
 .profile-div {
