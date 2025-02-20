@@ -2,7 +2,7 @@
 import { ref, onMounted } from "vue"
 import DownloadCV from '../components/DownloadCV.vue'
 import SocialMediaLink from '../components/SocialMediaLink.vue'
-import ContentCard from '../components/ContentCard.vue'
+import WhatIDo from '../components/WhatIDo.vue'
 
 const titles = ["Frontend Developer", "Fullstack Developer"];
 const technologies = ["a", "b", "c", "b", "c", "b", "c", "b", "c"];
@@ -68,21 +68,17 @@ onMounted(() => {
       <!-- Add content here if needed, or leave it as a styled empty block -->
     </div>
   </div>
-  <div class="what-i-do">
-    <h2># What I do</h2>
-    <div class="what-i-do-list">
-      <div class="what-i-do-list">
-        <ContentCard /><ContentCard /><ContentCard />
-      </div>
-    </div>
-  </div>
+
+  <WhatIDo/>
+
   <div class="tech-stack">
-    <h2># My Tech Stack</h2>
+    <h2>Tech Stack</h2>
     <div class="tech-stack-list">
       <div  class="tech-stack-box" :class="{floatUp: index===floatId, }"
-            v-for="(_, index) in technologies" :key="index"/>
+          v-for="(_, index) in technologies" :key="index"/>
     </div>
   </div>
+
 </template>
 
 <style scoped>
@@ -160,27 +156,6 @@ p {
   cursor: pointer;
 }
 
-.what-i-do {
-  display: flex;
-  width: 100%;
-  background-color: var(--bg-color-2);
-  padding: 2.5rem;
-
-  flex-direction: column;
-  gap: 20px;
-}
-.what-i-do-list {
-  display: flex;
-  width: 100%;
-  flex-direction: row;
-  gap: 30px;
-  justify-content: center;
-  align-items: center;
-}
-.what-i-do-list > * {
-  flex: 1 1 calc(30% - 20px); /* 每個卡片佔 1/3，減去 gap */
-}
-
 .tech-stack {
   display: flex;
   width: 100%;
@@ -188,7 +163,11 @@ p {
   padding: 2.5rem;
 
   flex-direction: column;
+  align-items: center;
   gap: 20px;
+}
+.tech-stack h2{
+  font-size: 5rem;
 }
 .tech-stack-list {
   display: flex;
