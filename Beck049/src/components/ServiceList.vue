@@ -5,11 +5,20 @@
         <h3 class="service-name">{{ service.name }}</h3>
         <p class="service-description">{{ service.description }}</p>
         <div class="service-footer">
-          <div class="service-icons">
-            <span v-for="(icon, index) in service.icons" :key="index" class="icon">
-              <img :src="`./icons/${icon}.png`" :alt="icon" />
-            </span>
-          </div>
+          <button class="service-links">
+            <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" 
+                stroke-linecap="round" stroke-linejoin="round" class="text-accent"
+                height="20px" width="20px" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M4.5 9h15"></path>
+                <path d="M4.5 15h15"></path>
+                <path d="M12 3a12 12 0 0 1 0 18"></path>
+                <path d="M12 3a12 12 0 0 0 0 18"></path>
+            </svg>
+            <p>website</p></button>
+          <button class="service-links">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github size-3"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+            <p>github</p></button>
         </div>
       </div>
     </div>
@@ -74,19 +83,20 @@
   
   /* Individual Cards */
   .service-card {
+    display: flex;
+    flex-direction: column;
     background: var(--primary); /* Card background */
     color: var(--gray-text); /* Text color */
-    opacity: 0.6;
     border-radius: 10px;
-    padding: 45px 30px;
+    padding: 20px;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for the cards */
   }
   
   /* Thumbnail Styling */
   .service-thumbnail {
-    width: 100px;
-    height: 100px;
+    width: 100%;
+    aspect-ratio: 5/4 ; /* make sure square */
     margin: 0 auto 15px;
     background: #ccc;
     border-radius: 5px;
@@ -105,21 +115,29 @@
     font-size: 14px;
     line-height: 1.5;
     margin-bottom: 15px;
+    text-align: left;
+    flex-grow: 1;
   }
   
   /* Footer with Icons */
   .service-footer {
     display: flex;
-    justify-content: center; /* Aligns the icons in the center */
+    flex-direction: row;
+    justify-content: flex-start; /* Aligns the icons in the center */
     gap: 10px;
+    margin-top:auto;
   }
-  
-  .service-icons .icon img {
-    width: 30px;
-    height: 30px;
-    object-fit: contain;
+  .service-links {
+    display: flex;
+    flex-direction: row;
+    background: var(--gray-text);
+    border-radius: 10px;
+    gap: 5px;
   }
-  
+  .service-links p{
+    font-size:12px;
+    align-content: center;
+  }
   /* Responsive Design Tweaks (Optional) */
   @media (max-width: 768px) {
     .service-card {
