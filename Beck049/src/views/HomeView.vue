@@ -3,12 +3,11 @@ import { ref, onMounted } from "vue"
 import DownloadCV from '../components/DownloadCV.vue'
 import SocialMediaLink from '../components/SocialMediaLink.vue'
 import WhatIDo from '../components/WhatIDo.vue'
+import MyStack from '../components/MyStack.vue'
 
 const titles = ["Frontend Developer", "Fullstack Developer"];
-const technologies = ["a", "b", "c", "b", "c", "b", "c", "b", "c"];
 const displayText = ref("");
 let i = 0, j = 0, isDeleting = false;
-let floatId = 0;
 
 const typeEffect = () => {
   const curTitle = titles[i];
@@ -30,14 +29,8 @@ const typeEffect = () => {
   setTimeout(typeEffect, speed);
 };
 
-const setFloat = () => {
-  setTimeout(setFloat, 2000);
-  floatId = (floatId+1) % technologies.length;
-}
-
 onMounted(() => {
   typeEffect();
-  setFloat();
 });
 
 </script>
@@ -71,13 +64,7 @@ onMounted(() => {
 
   <WhatIDo/>
 
-  <div class="tech-stack">
-    <h2>Tech Stack</h2>
-    <div class="tech-stack-list">
-      <div  class="tech-stack-box" :class="{floatUp: index===floatId, }"
-          v-for="(_, index) in technologies" :key="index"/>
-    </div>
-  </div>
+  <MyStack/>
 
 </template>
 
@@ -156,36 +143,5 @@ p {
   cursor: pointer;
 }
 
-.tech-stack {
-  display: flex;
-  width: 100%;
-  background-color: var(--bg-color-1);
-  padding: 2.5rem;
-
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-}
-.tech-stack h2{
-  font-size: 5rem;
-}
-.tech-stack-list {
-  display: flex;
-  flex-direction: row;
-  gap: 30px;
-  justify-content: center;
-  align-items: center;
-}
-.tech-stack-box {
-  width: 64px;
-  height: 64px;
-  border: 2px solid var(--gray-text);
-  border-radius: 8px;
-  box-shadow: 5px 5px 18px var(--primary);
-  transition: transform 1s ease-in-out;
-}
-.floatUp {
-  transform: translateY(-10px);
-}
 
 </style>
