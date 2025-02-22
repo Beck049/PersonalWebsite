@@ -4,6 +4,7 @@ import DownloadCV from '../components/DownloadCV.vue'
 import SocialMediaLink from '../components/SocialMediaLink.vue'
 import WhatIDo from '../components/WhatIDo.vue'
 import MyStack from '../components/MyStack.vue'
+import Foot from '../components/Footer.vue'
 
 const titles = ["Frontend Developer", "Fullstack Developer"];
 const displayText = ref("");
@@ -65,6 +66,8 @@ onMounted(() => {
   <WhatIDo/>
 
   <MyStack/>
+
+  <Foot/>
 
 </template>
 
