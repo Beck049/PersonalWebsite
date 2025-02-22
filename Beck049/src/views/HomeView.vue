@@ -2,6 +2,9 @@
 import { ref, onMounted } from "vue"
 import DownloadCV from '../components/DownloadCV.vue'
 import SocialMediaLink from '../components/SocialMediaLink.vue'
+import WhatIDo from '../components/WhatIDo.vue'
+import MyStack from '../components/MyStack.vue'
+import Foot from '../components/Footer.vue'
 
 const titles = ["Frontend Developer", "Fullstack Developer"];
 const displayText = ref("");
@@ -59,14 +62,13 @@ onMounted(() => {
       <!-- Add content here if needed, or leave it as a styled empty block -->
     </div>
   </div>
-  <div class="what-i-do">
-    <h2># What I do</h2>
-    <div></div>
-  </div>
-  <div class="tech-stack">
-    <h2># My Tach Stack</h2>
-    <div></div>
-  </div>
+
+  <WhatIDo/>
+
+  <MyStack/>
+
+  <Foot/>
+
 </template>
 
 <style scoped>
@@ -144,17 +146,5 @@ p {
   cursor: pointer;
 }
 
-.what-i-do {
-  display: flex;
-  width: 100%;
-  background-color: var(--bg-color-2);
-  padding: 2.5rem;
-}
 
-.tech-stack {
-  display: flex;
-  width: 100%;
-  background-color: var(--bg-color-1);
-  padding: 2.5rem;
-}
 </style>
