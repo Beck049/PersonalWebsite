@@ -40,14 +40,14 @@
     display: flex;
     width: 100%;
     background-color: var(--bg-color-1);
-    padding: 2.5rem;
+    padding: 6rem 2.5rem;
 
     flex-direction: column;
     align-items: center;
     gap: 20px;
 }
 .what-i-do h2 {
-    font-size: 5rem;
+    font-size: 3rem;
     color: var(--accent-1);
     font-weight: bolder;
 }
