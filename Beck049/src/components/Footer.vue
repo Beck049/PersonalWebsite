@@ -11,7 +11,7 @@
     background: #0a0a0a;
     width: 100%;
     color: #fff;
-    padding: 0px;
+    padding: 0rem 3rem;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
