@@ -32,7 +32,7 @@ export default {
           category: 2 /* Others */,
           tags: ["Godot"],
         },
-        { title:"xz-util", period:"2024/05",
+        { title:"xz-util", period:"2024/05~2024/06",
           content:"我對 CVE-2024-3096 (xz-utils 後門）進行了深入解析，並著重於 靜態分析動態庫 liblzma5.so。這個後門影響 xz-utils 5.6.0 和 5.6.1 版本，透過修改 liblzma，在特定條件下影響 OpenSSH 認證過程。我使用 Ghidra 針對 liblzma5.so 進行逆向分析，透過函式交叉引用與 CFG(控制流程圖)追蹤可疑邏輯，並對比不同版本的二進制代碼變化。分析過程中，我特別關注 惡意代碼的植入點、數據混淆技術，以及可能的後門觸發條件，試圖還原其行為模式。這次研究讓我更熟悉 靜態分析 ELF 動態庫 的技巧，也加深了對 惡意程式如何隱藏自身 的理解。",
           image:"../src/components/icons/projectCover/4.png",
           category: 3 /* Others */,
