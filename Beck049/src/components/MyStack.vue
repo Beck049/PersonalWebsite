@@ -39,7 +39,9 @@
     <div class="row">
       <div class="tech-stack-list border" v-bind:ref="setRefs">
         <div class="tech-stack-box" :class="{ floatUp: index === floatId }"
-            v-for="(_, index) in technologies" :key="index"/>
+            v-for="(stack, index) in technologies" :key="index">
+            <img :src="stack.src" />
+        </div>
       </div>
     </div>
   </div>
@@ -50,8 +52,29 @@ import { ref, onMounted, onBeforeUnmount } from "vue";
 import { SeqAnimate } from "./utils/SeqAnimate.js";
 
 // var for floating tech
-const technologies = ["a", "b", "c", "b", "c", "b", "c", "b", "c", "a", "b", "c"];
 const floatId = ref(0);
+const technologies = [
+  { name: "C", src: "../src/components/icons/C.png" },
+  { name: "C#", src: "../src/components/icons/Csharp.png" },
+  { name: "Python", src: "../src/components/icons/Python.png" },
+  { name: "Javascript", src: "../src/components/icons/JS.png" },
+  { name: "Typescript", src: "../src/components/icons/TS.png" },
+  { name: "Go", src: "../src/components/icons/go.png" },
+  { name: "git", src: "../src/components/icons/git.png" },
+  { name: "vuejs", src: "../src/components/icons/vue.png" },
+  { name: "reactjs", src: "../src/components/icons/react.png" },
+  { name: "nodejs", src: "../src/components/icons/nodejs.png" },
+  { name: "dotnet", src: "../src/components/icons/dotnet.png" },
+  { name: "mongo", src: "../src/components/icons/mongo.png" },
+  { name: "mysql", src: "../src/components/icons/mysql.png" },
+  { name: "docker", src: "../src/components/icons/docker.png" },
+  { name: "graphql", src: "../src/components/icons/graphql.png" },
+  { name: "figma", src: "../src/components/icons/figma.png" },
+  { name: "godot", src: "../src/components/icons/Godot.png" },
+  { name: "kali", src: "../src/components/icons/kali.png" },
+  { name: "ghidra", src: "../src/components/icons/ghidra.png" },
+  { name: "wireshark", src: "../src/components/icons/wireshark.png" },
+];
 
 const setFloat = () => {
   setTimeout(() => {
@@ -167,6 +190,9 @@ p {
   border-radius: 8px;
   box-shadow: 5px 5px 18px var(--primary);
   transition: transform 1s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .floatUp {
   transform: translateY(-10px);
