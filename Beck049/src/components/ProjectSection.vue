@@ -82,18 +82,23 @@ import Tag from '../components/Tag.vue'
 }
 
 .project-frame {
-  width:500px;
-  height:300px;
+  width: 500px;
+  height: 300px;
   border-radius: 30px;
-
-  background: contain no-repeat center center;
-  background-size: cover;
-  background: #DCDCDC;
-
+  
+  background-image: v-bind("`url(${image})`");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 130%;
+  
   position: absolute;
   right: 150px;
   z-index: 1;
+
+  transform: scale(1);
+  transform-origin: center;
 }
+
 .tag-group {
   width: 100%;
   display: flex;
