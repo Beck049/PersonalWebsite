@@ -16,7 +16,7 @@
                 <li>國立台灣師範大學｜資訊工程學系 大學畢業</li>
             </ul>
             <div class="data-group__descript">
-                Lorem ipsum odor amet, cnosectetuer adipiscing elit. Porttitor eros ac finibus dolor cubilis torquent. Aptent varius. Lorem ipsum odor amet, consectetuer adipiscing elit. Porttitor eros ac finibus dolor cubilia.
+                我是一名對資訊技術充滿熱情的學生，專注於軟體開發、機器學習與資安研究。擁有豐富的專案經驗，如「師大資工線上申請系統」、醫療影像分析與遊戲開發，並具備專案管理與團隊協作能力，樂於迎接技術挑戰並持續精進。
             </div>
             <div class="tag-group">
                 <Tag name="Python"/>

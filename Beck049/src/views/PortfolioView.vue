@@ -5,7 +5,7 @@ import NameCard from '../components/NameCard.vue'
 <template>
   <div class="profile-page">
     <!-- Top Section -->
-    <div class="floating-card" :style="{marginTop: positionY + 'px'}"><NameCard /></div>
+    <div class="floating-card" :style="shouldFloat ? { marginTop: positionY + 'px' } : {}"><NameCard /></div>
 
     <!-- Bottom Section -->
     <div class="profile-content">
@@ -24,6 +24,19 @@ import NameCard from '../components/NameCard.vue'
             <i>{{ edu.name }}</i>
             <i>{{ edu.title }}</i>
             <i>{{ edu.period }}</i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skills -->
+      <div class="section">
+        <h2><p class="hash"># </p>Skills</h2>
+        <div class="skill-group">
+          <div class="skill" v-for="(skill, index) in skills" :key="index">
+            <div class="border-style">{{ skill.title }}</div>
+            <div class="border-style">
+              <p v-for="(ele, index) in skill.elements" :key="index">{{ele}}</p>
+            </div>
           </div>
         </div>
       </div>
@@ -47,19 +60,6 @@ import NameCard from '../components/NameCard.vue'
             <div class="tag-group">
               <Tag :name="tags" v-for="(tags, index2) in exp.tags" :key="index2" />
           </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Skills -->
-      <div class="section">
-        <h2><p class="hash"># </p>Skills</h2>
-        <div class="skill-group">
-          <div class="skill" v-for="(skill, index) in skills" :key="index">
-            <div class="border-style">{{ skill.title }}</div>
-            <div class="border-style">
-              <p v-for="(ele, index) in skill.elements" :key="index">{{ele}}</p>
-            </div>
           </div>
         </div>
       </div>
@@ -94,9 +94,9 @@ import NameCard from '../components/NameCard.vue'
         </div>
       </div>
 
-      <!-- Others -->
+      <!-- Activities -->
       <div class="section">
-        <h2><p class="hash"># </p>Others</h2>
+        <h2><p class="hash"># </p>Activities</h2>
         <div class="other" v-for="(other, index) in others" :key="index">
           <div class="border-style project-content">
             <div class="other-title">
@@ -116,13 +116,25 @@ import NameCard from '../components/NameCard.vue'
 </template>
 
 <script lang="ts">
+
+import { ref, computed } from "vue";
+
+const windowWidth = ref(window.innerWidth);
+// need computed to update the value `shouldFloat` every time window change 
+const shouldFloat = computed(() => windowWidth.value >= 1000);
+
+window.addEventListener("resize", () => {
+  windowWidth.value = window.innerWidth;
+});
+
+
 export default {
   data() {
     return {
       lastPosition: 0,
       isHidden: false,
       positionY: 0,
-      about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent finibus dui id lorem placerat aliquam. Quisque eget suscipit orci, varius ornare velit. Nulla facilisi. Suspendisse euismod sagittis hendrerit. Ut nibh tellus, elementum non sollicitudin vitae, suscipit non quam. Mauris vehicula mollis tellus in commodo. Pellentesque tempus tempus viverra.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent finibus dui id lorem placerat aliquam. Quisque eget suscipit orci.",
+      about: "我是一名對資訊技術充滿熱情的學生，專注於程式設計及各種技術領域的探索。\n\n從大學開始，我逐漸找到對程式的興趣，並在不同領域的專案中磨練自己的技能。無論是醫療影像分析、Web開發、遊戲設計，還是資安領域，我都深入研究並實作相關技術。特別是在「師大資工線上申請系統」專案中，我擔任專案經理，負責規劃與管理專案進度，並協助團隊進行前後端開發。\n\n我具備果斷的決策力、強大的意志力以及良好的團隊合作精神，並喜歡追根究底地解決問題。這些特質讓我在挑戰中不斷成長，並能夠在壓力下有效應對各種挑戰，保持高效的工作表現。",
       educations: [
         {
           img: "./src/components/icons/NTNU.png", name:"National Taiwan Normal University", title:"Bachleor's degree, Computer Science", period:"2019/09 ~ 2024/06"
@@ -143,9 +155,24 @@ export default {
       ],
       projects: [
         {
+          title:"XZ-util report", period:"2024/05~2024/06",
+          content:"- Developing reverse engineering skills, specifically in tracking function calls, analyzing control flow graphs (CFG), and comparing different versions of binary code to uncover vulnerabilities.\n- Deepened the understanding of how malware hides and triggers within systems, as well as how to identify backdoors and malicious code in software applications.",
+          tags: ["Cybersecurity", "Ghidra"],
+        },
+        {
           title:"NTNU_ADMS", period:"2022/09 ~ 2023/01",
-          content:"在系上的「軟體工程」中實作「國立臺灣師範大學資工系 線上申請系統 」，針對系上各種報名管道進行數位化，包含線上申請、線上評分、排名以及資料分析。\n在專案中擔任 Project Manager 的角色，主要工作為排定及監督開發流程，同時也負責前端與後端的組內教學與支援開發。",
+          content:"- Honed my ability to organize development workflows, monitor progress, and guide the team towards successful project completion.\n- Developed skills in both frontend and backend, which gives me a deeper understanding of full-stack development.\n- By working with MongoDB, I gained valuable experience with NoSQL databases, enhancing ability to work with non-relational data storage and understanding the flexibility they offer.",
           tags: ["vue.ts", "Go", "MongoDB"],
+        },
+        {
+          title:"Brain Tumor MRI", period:"2022/07~2023/06",
+          content:"- Developed expertise in using CNNs for analyzing medical images, specifically for detecting and segmenting brain tumors in MRI scans.\n- gained experience in instance segmentation, allowing you to accurately label specific regions in medical images.\n- You honed your skills in applying machine learning techniques to healthcare problems, leveraging frameworks like PyTorch and MONAI.",
+          tags: ["Pytorch", "CNN", "Machine Learning"],
+        },
+        {
+          title:"PokemonRL", period:"2023/09~2023/12",
+          content:"- Deepened the understanding of reinforcement learning by implementing Deep Q-Learning (DQN) and training an agent to optimize its actions in a complex environment like Pokémon Red.",
+          tags: ["Pyboy", "Stable Baselines 3", "Reinforce Learning"],
         },
       ],
       certificates: [
@@ -156,8 +183,23 @@ export default {
       others: [
         {
           title:"Google Foobar 2023",
-          content:"I accedently got the challenge at 2023/3/8 after lunch break.\nAnd I was working on Medical Segmentation Machine Learning using python for the pass few months. though I was working on an intern job using React.ts & C# & abp framework",
+          content:"- honed my ability to break down complex problems and design effective solutions within a limited time frame.\n- Improving the problem-solving skills and the ability to think critically under pressure.",
           tags: ["Python"],
+        },
+        {
+          title:"Normal Game Jam 2024",
+          content:"- Gained hands-on experience in using Godot to develop a 2D dungeon puzzle game, improving skills in game engine usage.\n- The tight development timeline taught me how to manage time effectively.",
+          tags: ["Godot"],
+        },
+        {
+          title:"SEEDLab",
+          content:"- Through hands-on exercises like Buffer Overflow, SQL Injection, and ARP Spoofing, you gained practical experience in identifying and understanding common vulnerabilities and attack techniques.",
+          tags: ["Cybersecurity"],
+        },
+        {
+          title:"XV6",
+          content:"- Deepened the understanding of critical OS mechanisms, such as system calls, process management, memory management, and file systems, by implementing them within the xv6 kernel.\n- Gained hands-on experience modifying and expanding the xv6 kernel.",
+          tags: ["Operating System"],
         },
       ],
     };
@@ -189,19 +231,6 @@ export default {
   background: var(--bg-color-1);
 }
 
-.profile-div {
-  flex: 1 1 250px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-@media (min-width: 980px) {
-  .profile-div {
-    max-width: 360px;
-  }
-}
-
 .floating-card {
   position: sticky;
   flex-direction: column;
@@ -217,6 +246,23 @@ export default {
   border: 1px solid var(--gray-text);
   border-radius: 20px;
   padding: 28px 32px;
+}
+
+@media (max-width: 1000px) {
+  .profile-page {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .floating-card {
+    position: static; /* Remove sticky positioning */
+    width: fit-content; /* Make it fit its content */
+    margin: 0 auto; /* Center it horizontally */
+  }
+
+  .profile-content {
+    width: 100%;
+  }
 }
 
 .section {
