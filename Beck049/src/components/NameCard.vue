@@ -92,7 +92,11 @@ onUnmounted(() => {
     transition: transform 0.1s linear;
     transform-style: preserve-3d;
 }
-
+@media (max-width: 320px){
+    .card {
+        width: 340px;
+    }
+}
 .card.flipped {
     transform: rotateY(180deg);
 }

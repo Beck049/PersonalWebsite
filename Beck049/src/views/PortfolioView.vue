@@ -252,6 +252,7 @@ export default {
   .profile-page {
     flex-direction: column;
     align-items: center;
+    padding: 20px 0px;
   }
 
   .floating-card {
@@ -262,6 +263,7 @@ export default {
 
   .profile-content {
     width: 100%;
+    padding: 28px 32px;
   }
 }
 
