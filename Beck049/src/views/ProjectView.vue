@@ -98,6 +98,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 15px;
   padding: 10px;
   margin-bottom: 3rem;
@@ -116,6 +117,22 @@ h1 {
   transition: transform 0.2s ease-in-out;
   opacity: 0.6;
   cursor: pointer;
+}
+@media (max-width: 450px) {
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-align: center;
+  }
+  .category div {
+    border-radius: 25px;
+    padding: 5px 10px;
+    background: var(--accent-1);
+    opacity: 0.3;
+    font-weight: bolder;
+    font-size: 0.8rem;
+    color: var(--gray-text);
+  }
 }
 .chosen {
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);  

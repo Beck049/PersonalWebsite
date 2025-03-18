@@ -18,7 +18,6 @@ import Tag from '../components/Tag.vue'
   </div>
 </template>
 
-
 <script lang="ts">
   export default {
     props: {
@@ -56,6 +55,7 @@ import Tag from '../components/Tag.vue'
   justify-content: space-between;
   position: relative;
 }
+
 .project-head {
   display: flex;
   flex-direction: column;
@@ -106,5 +106,60 @@ import Tag from '../components/Tag.vue'
   align-items: center;
   gap: 5px;
   padding: 10px;
+}
+
+@media (max-width: 450px)  {
+  .project-section {
+    gap: 0px;
+    width:100%;
+    padding: 10px 0px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+
+    justify-content: space-between;
+    position: relative;
+  }
+  .project-head {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width:60%;
+    min-height: 0px;
+    margin-right: 0px;
+    align-self: center;
+
+    position: relative;
+    z-index: 2;
+    bottom: 5px;
+  }
+  
+  .project-frame {
+    width: 250px;
+    height: 150px;
+    border-radius: 30px;
+    
+    background-image: v-bind("`url(${image})`");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 130%;
+    
+    position: relative;
+    right: 0px;
+    z-index: 1;
+  
+    transform: scale(1);
+    transform-origin: center;
+    align-self: center;
+  }
+  .project-title {
+    font-size: 1.3rem;
+  }
+  .project-content {
+    display: none;
+  }
+  .tag-group {
+    display: none;
+  }
 }
 </style>
