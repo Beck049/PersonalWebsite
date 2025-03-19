@@ -52,30 +52,31 @@ import { ref, onMounted, onBeforeUnmount } from "vue";
 import type { ComponentPublicInstance } from "vue";
 // @ts-ignore
 import { SeqAnimate } from "./utils/SeqAnimate.js"
+const base = import.meta.env.BASE_URL;
 
 // var for floating tech
 const floatId = ref(0);
 const technologies = [
-  { name: "C", src: "/icons/tools/C.png" },
-  { name: "C#", src: "/icons/tools/Csharp.png" },
-  { name: "Python", src: "/icons/tools/Python.png" },
-  { name: "Javascript", src: "/icons/tools/JS.png" },
-  { name: "Typescript", src: "/icons/tools/TS.png" },
-  { name: "Go", src: "/icons/tools/go.png" },
-  { name: "git", src: "/icons/tools/git.png" },
-  { name: "vuejs", src: "/icons/tools/vue.png" },
-  { name: "reactjs", src: "/icons/tools/react.png" },
-  { name: "nodejs", src: "/icons/tools/nodejs.png" },
-  { name: "dotnet", src: "/icons/tools/dotnet.png" },
-  { name: "mongo", src: "/icons/tools/mongo.png" },
-  { name: "mysql", src: "/icons/tools/mysql.png" },
-  { name: "docker", src: "/icons/tools/docker.png" },
-  { name: "graphql", src: "/icons/tools/graphql.png" },
-  { name: "figma", src: "/icons/tools/figma.png" },
-  { name: "godot", src: "/icons/tools/Godot.png" },
-  { name: "kali", src: "/icons/tools/kali.png" },
-  { name: "ghidra", src: "/icons/tools/ghidra.png" },
-  { name: "wireshark", src: "/icons/tools/wireshark.png" },
+  { name: "C", src: `${base}/icons/tools/C.png` },
+  { name: "C#", src: `${base}/icons/tools/Csharp.png` },
+  { name: "Python", src: `${base}/icons/tools/Python.png` },
+  { name: "Javascript", src: `${base}/icons/tools/JS.png` },
+  { name: "Typescript", src: `${base}/icons/tools/TS.png` },
+  { name: "Go", src: `${base}/icons/tools/go.png` },
+  { name: "git", src: `${base}/icons/tools/git.png` },
+  { name: "vuejs", src: `${base}/icons/tools/vue.png` },
+  { name: "reactjs", src: `${base}/icons/tools/react.png` },
+  { name: "nodejs", src: `${base}/icons/tools/nodejs.png` },
+  { name: "dotnet", src: `${base}/icons/tools/dotnet.png` },
+  { name: "mongo", src: `${base}/icons/tools/mongo.png` },
+  { name: "mysql", src: `${base}/icons/tools/mysql.png` },
+  { name: "docker", src: `${base}/icons/tools/docker.png` },
+  { name: "graphql", src: `${base}/icons/tools/graphql.png` },
+  { name: "figma", src: `${base}/icons/tools/figma.png` },
+  { name: "godot", src: `${base}/icons/tools/Godot.png` },
+  { name: "kali", src: `${base}/icons/tools/kali.png` },
+  { name: "ghidra", src: `${base}/icons/tools/ghidra.png` },
+  { name: "wireshark", src: `${base}/icons/tools/wireshark.png` },
 ];
 
 const setFloat = () => {
