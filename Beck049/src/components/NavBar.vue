@@ -16,7 +16,6 @@ const toggleMenu = () => {
         <li><RouterLink to="/">Home</RouterLink></li>
         <li><RouterLink to="/portfolio">Portfolio</RouterLink></li>
         <li><RouterLink to="/project">Projects</RouterLink></li>
-        <li><RouterLink to="/service">Services</RouterLink></li>
       </ul>
       <button class="contact-button">Contact Me</button>
       <button class="menu-button" @click="toggleMenu"></button>
