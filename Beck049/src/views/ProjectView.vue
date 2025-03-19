@@ -87,6 +87,7 @@ export default {
   justify-content: flex-start;
   padding-top: 3rem;
   background: var(--bg-color-1);
+  min-height: 100vh
 }
 h1 {
   font-size: 60px;

@@ -143,7 +143,7 @@ export default {
       experiences: [
         {
           img:"/icons/GSS.png", name:"Galaxy Software Services Corporation", title:"Assistant Software Engineer", period:"2023/01 ~ 2023/07",
-          content:"- Gained expertise in integrating various company applications to optimize workflows and enhance functionality.\n- Strengthened knowledge in React.js, MySQL, and .NET framework, with effective problem-solving techniques.\n- Improved skills in gathering technical and business requirements and translating them into actionable development plans.",
+          content:"- 開發跨服務整合平台：設計並實作自動流程圖介面，整合公司 SaaS 服務以及 Google 相關功能，提升自動化流程效率 40%，降低客戶手動設定時間。\n- 串接 SHOPLINE API：負責 API 串接，讓公司服務無縫連接外部電商平台，成功擴展 5+ 家合作企業，提高企業應用靈活度。\n- 提升系統效能與維護性：使用 React.js、MySQL、.NET framework 進行開發與優化",
           tags: [".Net Framework", "React.js", "MySQL"],
         },
       ],
@@ -156,18 +156,23 @@ export default {
       projects: [
         {
           title:"XZ-util report", period:"2024/05~2024/06",
-          content:"- Developing reverse engineering skills, specifically in tracking function calls, analyzing control flow graphs (CFG), and comparing different versions of binary code to uncover vulnerabilities.\n- Deepened the understanding of how malware hides and triggers within systems, as well as how to identify backdoors and malicious code in software applications.",
+          content:"- 靜態分析惡意後門：使用 Ghidra 逆向分析 liblzma5.so，透過函式交叉引用與控制流程圖 (CFG)追蹤可疑邏輯，成功識別內部修改點，還原其影響 OpenSSH 認證的行為模式。",
           tags: ["Cybersecurity", "Ghidra"],
         },
         {
           title:"NTNU_ADMS", period:"2022/09 ~ 2023/01",
-          content:"- Honed my ability to organize development workflows, monitor progress, and guide the team towards successful project completion.\n- Developed skills in both frontend and backend, which gives me a deeper understanding of full-stack development.\n- By working with MongoDB, I gained valuable experience with NoSQL databases, enhancing ability to work with non-relational data storage and understanding the flexibility they offer.",
+          content:"- 專案管理與流程優化：帶領 20+ 人開發團隊，規劃開發流程與監督進度，確保專案在時程內完成，成功將研究所申請系統100% 電子化，減少紙本作業時間與人力成本。\n- 全端開發與技術學習：負責前後端開發，使用 TypeScript + Vue.js 建構元件化前端、Go + MongoDB 優化後端效能，並提升自身對 NoSQL 資料庫的理解與應用能力。\n- 團隊培訓與技術支援：除了開發與管理，還協助內部教學與技術指導，提高團隊開發效率 25%，促進組員快速適應新技術與架構，確保專案順利進行。",
           tags: ["vue.ts", "Go", "MongoDB"],
         },
         {
           title:"Brain Tumor MRI", period:"2022/07~2023/06",
-          content:"- Developed expertise in using CNNs for analyzing medical images, specifically for detecting and segmenting brain tumors in MRI scans.\n- gained experience in instance segmentation, allowing you to accurately label specific regions in medical images.\n- You honed your skills in applying machine learning techniques to healthcare problems, leveraging frameworks like PyTorch and MONAI.",
+          content:"- 腦瘤 MRI 影像分析與分割：使用 CNN 與 instance segmentation 技術，自動辨識並標註腦瘤位置，模型達成 腫瘤檢測準確率 92%，顯著提升 MRI 影像診斷的自動化程度。\n- 深度學習框架應用：運用 MONAI 的 UNETR 進行影像標註，結合 PyTorch 訓練 CNN 模型，有效提升特徵提取能力。",
           tags: ["Pytorch", "CNN", "Machine Learning"],
+        },
+        {
+          title:"師大暑期資工營", period:"2021/11~2022/07",
+          content:"- 統籌與專案管理：擔任總籌，負責規劃 100 人規模 的資工營隊，制定時程並監督各組進度，確保所有講座、實作課程與活動順利執行，活動滿意度達 90%。\n- 跨組協調與廠商洽談：與多個廠商接洽，確保場地、設備、物資準時到位，同時支援各組運作，讓團隊能專注於內容規劃與互動。\n- 提升高中生對資工的認識：透過精心設計的課程與活動，使參與學生對大學資工系的了解度提高 85%（根據活動後問卷統計），成功激發學生對資訊科學的興趣。",
+          tags: ["Leadership", "Teamwork"],
         },
         {
           title:"PokemonRL", period:"2023/09~2023/12",
