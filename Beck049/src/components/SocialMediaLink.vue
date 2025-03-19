@@ -1,16 +1,12 @@
-<script lang="ts" setup>
-const base = import.meta.env.BASE_URL;
-</script>
-
 <template>
     <a :href="url" target="_blank" rel="noopener noreferrer" class="icon-link">
       <div class="icon-container">
-        <img :src="`${base}/icons/${fileName}`" :alt="`${fileName} icon`" class="icon" />
+        <img :src="`/icons/${fileName}`" :alt="`${fileName} icon`" class="icon" />
       </div>
     </a>
   </template>
   
-  <script lang="ts">
+  <script>
   export default {
     props: {
       fileName: {
