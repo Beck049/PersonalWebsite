@@ -6,8 +6,8 @@
                 <div class="head-group__img"></div>
                 <div class="head-group__name">Beck Xiao</div>
                 <div class="social-icons">
-                    <i> <SocialMediaLink fileName="Github.png" url="https://github.com" /> </i>
-                    <i> <SocialMediaLink fileName="Linkedin.png" url="https://linkedin.com" /> </i>
+                    <i> <SocialMediaLink fileName="Github.png" url="https://github.com/Beck049" /> </i>
+                    <i> <SocialMediaLink fileName="Linkedin.png" url="https://www.linkedin.com/in/%E6%96%87%E6%94%BF-beck-hsiao-%E8%95%AD-045318207/" /> </i>
                     <i> <SocialMediaLink fileName="Youtube.png" url="https://youtube.com" /> </i>
                 </div>
             </div>

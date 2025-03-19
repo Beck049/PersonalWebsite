@@ -4,7 +4,6 @@ import DownloadCV from '../components/DownloadCV.vue'
 import SocialMediaLink from '../components/SocialMediaLink.vue'
 import WhatIDo from '../components/WhatIDo.vue'
 import MyStack from '../components/MyStack.vue'
-import Foot from '../components/Footer.vue'
 
 const titles = ["Frontend Developer", "Fullstack Developer"];
 const displayText = ref("");
@@ -50,8 +49,8 @@ onMounted(() => {
       <div class="buttons">
         <DownloadCV />
         <div class="social-icons">
-          <i> <SocialMediaLink fileName="Github.png" url="https://github.com" /> </i>
-          <i> <SocialMediaLink fileName="Linkedin.png" url="https://linkedin.com" /> </i>
+          <i> <SocialMediaLink fileName="Github.png" url="https://github.com/Beck049" /> </i>
+          <i> <SocialMediaLink fileName="Linkedin.png" url="https://www.linkedin.com/in/%E6%96%87%E6%94%BF-beck-hsiao-%E8%95%AD-045318207/" /> </i>
           <i> <SocialMediaLink fileName="Youtube.png" url="https://youtube.com" /> </i>
         </div>
       </div>
@@ -63,11 +62,9 @@ onMounted(() => {
     </div>
   </div>
 
-  <WhatIDo/>
+  <!--WhatIDo/-->
 
   <MyStack/>
-
-  <Foot/>
 
 </template>
 
