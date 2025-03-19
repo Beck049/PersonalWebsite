@@ -19,4 +19,11 @@ h1 {
   text-align: center;
   margin-bottom: 2rem;
 }
+@media (max-width: 450px) {
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-align: center;
+  }
+}
 </style>
