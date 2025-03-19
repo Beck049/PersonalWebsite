@@ -10,10 +10,10 @@
     methods: {
       downloadCV() {
         // Replace this URL with the actual path to the CV file you want to download
-        const fileUrl = "./icons/Download.png";
+        const fileUrl = "/Resume.pdf";
         const link = document.createElement("a");
         link.href = fileUrl;
-        link.download = "CV.png"; // Specify the default download filename
+        link.download = "Resume.pdf"; // Specify the default download filename
         link.click();
       },
     },
