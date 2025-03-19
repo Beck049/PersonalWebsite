@@ -25,7 +25,6 @@ const toggleMenu = () => {
       <li><RouterLink to="/" @click="toggleMenu">Home</RouterLink></li>
       <li><RouterLink to="/portfolio" @click="toggleMenu">Portfolio</RouterLink></li>
       <li><RouterLink to="/project" @click="toggleMenu">Projects</RouterLink></li>
-      <li><RouterLink to="/service" @click="toggleMenu">Services</RouterLink></li>
     </ul>
   </nav>
 </template>
