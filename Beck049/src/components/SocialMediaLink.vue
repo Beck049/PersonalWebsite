@@ -1,7 +1,7 @@
 <template>
     <a :href="url" target="_blank" rel="noopener noreferrer" class="icon-link">
       <div class="icon-container">
-        <img :src="`./src/components/icons/${fileName}`" :alt="`${fileName} icon`" class="icon" />
+        <img :src="`/icons/${fileName}`" :alt="`${fileName} icon`" class="icon" />
       </div>
     </a>
   </template>

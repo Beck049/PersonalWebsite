@@ -25,7 +25,7 @@
             </div>
         </div>
         <div class="card-back">
-            Back
+            <img src="/icons/qrcode.png" width="300"/>
         </div>
     </div>
 </template>
@@ -115,6 +115,10 @@ onUnmounted(() => {
 }
 
 .card-back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     background: var(--gray-text);
     transform: rotateY(180deg);
 }

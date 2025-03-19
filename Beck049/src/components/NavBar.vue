@@ -132,7 +132,7 @@ const toggleMenu = () => {
   .menu-button{
     width: 32px;
     height: 32px;
-    background: url('./icons/menu.png') no-repeat center center;
+    background: url('/icons/menu.png') no-repeat center center;
     background-size: contain;
     border: none;
     cursor: pointer;

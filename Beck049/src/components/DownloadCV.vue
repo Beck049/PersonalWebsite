@@ -1,7 +1,7 @@
 <template>
     <button class="download-btn" @click="downloadCV">
       <p>Download CV</p>
-      <img src="./icons/Download.png" alt="Download Icon" class="icon" />
+      <img src="/icons/Download.png" alt="Download Icon" class="icon" />
     </button>
   </template>
   

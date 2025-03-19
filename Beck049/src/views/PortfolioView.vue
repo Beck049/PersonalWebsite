@@ -137,12 +137,12 @@ export default {
       about: "我是一名對資訊技術充滿熱情的學生，專注於程式設計及各種技術領域的探索。\n\n從大學開始，我逐漸找到對程式的興趣，並在不同領域的專案中磨練自己的技能。無論是醫療影像分析、Web開發、遊戲設計，還是資安領域，我都深入研究並實作相關技術。特別是在「師大資工線上申請系統」專案中，我擔任專案經理，負責規劃與管理專案進度，並協助團隊進行前後端開發。\n\n我具備果斷的決策力、強大的意志力以及良好的團隊合作精神，並喜歡追根究底地解決問題。這些特質讓我在挑戰中不斷成長，並能夠在壓力下有效應對各種挑戰，保持高效的工作表現。",
       educations: [
         {
-          img: "./src/components/icons/NTNU.png", name:"National Taiwan Normal University", title:"Bachleor's degree, Computer Science", period:"2019/09 ~ 2024/06"
+          img: "/icons/NTNU.png", name:"National Taiwan Normal University", title:"Bachleor's degree, Computer Science", period:"2019/09 ~ 2024/06"
         },
       ],
       experiences: [
         {
-          img:"./src/components/icons/GSS.png", name:"Galaxy Software Services Corporation", title:"Assistant Software Engineer", period:"2023/01 ~ 2023/07",
+          img:"/icons/GSS.png", name:"Galaxy Software Services Corporation", title:"Assistant Software Engineer", period:"2023/01 ~ 2023/07",
           content:"- Gained expertise in integrating various company applications to optimize workflows and enhance functionality.\n- Strengthened knowledge in React.js, MySQL, and .NET framework, with effective problem-solving techniques.\n- Improved skills in gathering technical and business requirements and translating them into actionable development plans.",
           tags: [".Net Framework", "React.js", "MySQL"],
         },
@@ -176,9 +176,9 @@ export default {
         },
       ],
       certificates: [
-        { title: "Google Project Manager", link: "https://www.coursera.org/account/accomplishments/specialization/S7Q54PP7S5PR", img: "./src/components/icons/GooglePM.jpeg" },
-        { title: "Google Cybersecurity", link: "https://www.coursera.org/account/accomplishments/specialization/J6QVZFU025GT", img: "./src/components/icons/GoogleCyber.jpeg" },
-        { title: "Google UX Design", link: "https://www.coursera.org/account/accomplishments/specialization/ZSMQ4DER7QFS", img: "./src/components/icons/GoogleUX.jpeg" },
+        { title: "Google Project Manager", link: "https://www.coursera.org/account/accomplishments/specialization/S7Q54PP7S5PR", img: "/icons/GooglePM.jpeg" },
+        { title: "Google Cybersecurity", link: "https://www.coursera.org/account/accomplishments/specialization/J6QVZFU025GT", img: "/icons/GoogleCyber.jpeg" },
+        { title: "Google UX Design", link: "https://www.coursera.org/account/accomplishments/specialization/ZSMQ4DER7QFS", img: "/icons/GoogleUX.jpeg" },
       ],
       others: [
         {
