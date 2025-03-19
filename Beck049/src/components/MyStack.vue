@@ -118,7 +118,7 @@ onBeforeUnmount(() => {
   flex-direction: column;
   gap: 20px;
 }
-@media (min-width: 450px) {
+@media (min-width: 620px) {
   .my-stack-head {
     width: 100%;
     display: flex;
