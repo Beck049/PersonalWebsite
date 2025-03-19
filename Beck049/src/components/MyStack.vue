@@ -1,6 +1,6 @@
 <template>
   <div class="my-stack column">
-    <div class="row">
+    <div class="my-stack-head">
       <div class="person border" v-bind:ref="setRefs">
         <h3>Beck Xiao</h3>
         <p><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" 
@@ -110,6 +110,19 @@ onBeforeUnmount(() => {
   align-items: center;
   background-color: var(--bg-color-1);
   padding: 3rem 0px;
+}
+.my-stack-head {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media (min-width: 450px) {
+  .my-stack-head {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
 }
 .my-stack div{
   max-width: 800px;

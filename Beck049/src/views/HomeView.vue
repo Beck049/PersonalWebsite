@@ -5,7 +5,7 @@ import SocialMediaLink from '../components/SocialMediaLink.vue'
 import WhatIDo from '../components/WhatIDo.vue'
 import MyStack from '../components/MyStack.vue'
 
-const titles = ["Frontend Developer", "Fullstack Developer"];
+const titles = ["Frontend Developer", "Fullstack Developer", "Cybersecurity Analyst"];
 const displayText = ref("");
 let i = 0, j = 0, isDeleting = false;
 
@@ -41,17 +41,14 @@ onMounted(() => {
       <h1>Hi, I'm Beck Xiao</h1>
       <h2 id="titles">{{ displayText }}<span class="cursor">|</span></h2>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-        Diam ultricies felis libero parturient parturient ullamcorper 
-        venenatis senectus. Facilisis quisque pellentesque, luctus orci 
-        inceptos orci lacinia magnis.
+        我是一名對資訊技術充滿熱情的學生，專注於軟體開發、機器學習與資安研究。擁有豐富的專案經驗，如「師大資工線上申請系統」、醫療影像分析與遊戲開發，並具備專案管理與團隊協作能力，樂於迎接技術挑戰並持續精進。
       </p>
       <div class="buttons">
         <DownloadCV />
         <div class="social-icons">
           <i> <SocialMediaLink fileName="Github.png" url="https://github.com/Beck049" /> </i>
           <i> <SocialMediaLink fileName="Linkedin.png" url="https://www.linkedin.com/in/%E6%96%87%E6%94%BF-beck-hsiao-%E8%95%AD-045318207/" /> </i>
-          <i> <SocialMediaLink fileName="Youtube.png" url="https://youtube.com" /> </i>
+          <!-- <i> <SocialMediaLink fileName="Youtube.png" url="https://youtube.com" /> </i> -->
         </div>
       </div>
     </div>
@@ -71,7 +68,7 @@ onMounted(() => {
 <style scoped>
 .portfolio-container {
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   background-color: var(--bg-color-1);
 }
@@ -110,6 +107,14 @@ h2 {
   color: var(--secondary);
   font-weight: 800;
 }
+@media (max-width: 450px) {
+  h1 {
+    font-size: 3.6rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+}
 
 .cursor {
   font-weight:bolder;
@@ -122,7 +127,7 @@ h2 {
 p {
   font-size: 1rem;
   margin: 1rem 0;
-  width: 35rem;
+  max-width: 35rem;
 }
 
 .buttons {
