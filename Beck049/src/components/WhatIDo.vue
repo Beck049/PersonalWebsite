@@ -34,13 +34,15 @@
 
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from "vue";
-import { SeqAnimate } from "./utils/SeqAnimate";
+import type { ComponentPublicInstance } from "vue";
+// @ts-ignore
+import { SeqAnimate } from "./utils/SeqAnimate.js";
 
-const divRefs = ref([]);
+const divRefs = ref<HTMLElement[]>([]);
 const { observeElements, stopObserving, handleVisibilityChange } = SeqAnimate(divRefs);
 
-const setRefs = (el) => {
-  if (el && !divRefs.value.includes(el)) {
+const setRefs = (el: Element | ComponentPublicInstance | null) => {
+  if (el instanceof HTMLElement && !divRefs.value.includes(el)) {
     divRefs.value.push(el);
   }
 };

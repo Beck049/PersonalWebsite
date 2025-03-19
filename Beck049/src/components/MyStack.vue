@@ -49,7 +49,9 @@
   
 <script setup lang="ts">
 import { ref, onMounted, onBeforeUnmount } from "vue";
-import { SeqAnimate } from "./utils/SeqAnimate.js";
+import type { ComponentPublicInstance } from "vue";
+// @ts-ignore
+import { SeqAnimate } from "./utils/SeqAnimate.js"
 
 // var for floating tech
 const floatId = ref(0);
@@ -84,11 +86,11 @@ const setFloat = () => {
 };
 
 // var for Sequential Animation
-const divRefs = ref([]);
+const divRefs = ref<HTMLElement[]>([]);
 const { observeElements, stopObserving, handleVisibilityChange } = SeqAnimate(divRefs);
 
-const setRefs = (el) => {
-  if (el && !divRefs.value.includes(el)) {
+const setRefs = (el: Element | ComponentPublicInstance | null) => {
+  if (el instanceof HTMLElement && !divRefs.value.includes(el)) {
     divRefs.value.push(el);
   }
 };
