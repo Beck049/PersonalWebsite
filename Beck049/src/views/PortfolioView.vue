@@ -88,7 +88,7 @@ import NameCard from '../components/NameCard.vue'
         <h2><p class="hash"># </p>Certificates</h2>
         <div class="certificate-group">
           <div class="certificate" v-for="(cert, index) in certificates" :key="index">
-            <div class="border-style"><a :href="cert.link">{{ cert.title }}</a></div>
+            <div class="border-style"><a :href="cert.link" target="_blank" rel="noopener noreferrer">{{ cert.title }}</a></div>
             <div><img :src="cert.img"></div>
           </div>
         </div>
