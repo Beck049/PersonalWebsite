@@ -76,6 +76,7 @@ onMounted(() => {
 .left-block, .right-block {
   padding: 2rem;
   flex: 1;
+  justify-content: center;
   align-content: center;
 }
 
@@ -91,8 +92,8 @@ onMounted(() => {
 
   .left-block {
     flex: none; /* Prevent stretching */
-    width: 100%; /* Make each block take full width */
-    height: 100%;
+    width: 100%;
+    height: 100vh;
   }
 }
 
@@ -125,6 +126,7 @@ h2 {
 }
 
 p {
+  color: var(--content-color);
   font-size: 1rem;
   margin: 1rem 0;
   max-width: 35rem;

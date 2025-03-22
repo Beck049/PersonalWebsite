@@ -7,7 +7,7 @@ import Tag from '../components/Tag.vue'
   <div class="project-section">
     <div class="project-head">
       <div class="project-period">{{period}}</div>
-      <div class="project-title">{{title}}</div>
+      <a class="project-title" :href="link" target="_blank" rel="noopener noreferrer">{{title}}</a>
       <div class="project-content">{{content}}</div>
       <div class="tag-group">
         <Tag :name="tags" v-for="(tags, index2) in tags" :key="index2" />
@@ -39,6 +39,9 @@ import Tag from '../components/Tag.vue'
       },
       tags: {
         type: Array as PropType<string[]>,
+      },
+      link: {
+        type: String,
       }
     },
   };

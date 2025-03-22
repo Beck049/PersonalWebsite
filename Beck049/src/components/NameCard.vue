@@ -157,6 +157,7 @@ onUnmounted(() => {
 }
 
 .data-group__descript{
+    color: var(--content-color);
     padding: 15px 0px;
 }
 

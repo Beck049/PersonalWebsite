@@ -141,6 +141,7 @@ h4 {
   font-size: 2rem;
 }
 p {
+  color: var(--content-color);
   font-size: 1rem;
 }
 .row {

@@ -35,7 +35,7 @@ import NameCard from '../components/NameCard.vue'
           <div class="skill" v-for="(skill, index) in skills" :key="index">
             <div class="border-style">{{ skill.title }}</div>
             <div class="border-style">
-              <p v-for="(ele, index) in skill.elements" :key="index">{{ele}}</p>
+              <p class="skill-list" v-for="(ele, index) in skill.elements" :key="index">{{ele}}</p>
             </div>
           </div>
         </div>
@@ -47,7 +47,7 @@ import NameCard from '../components/NameCard.vue'
         <div class="experience" v-for="(exp, index) in experiences" :key="index">
           <div class="experience-head">
             <div class="border-style image-center"><img :src="exp.img" width=60></div>
-            <div class="border-style experience-content">
+            <div class="border-style experience-data">
               <div class="experience-title">
                 <i>{{ exp.title }}</i>
                 <i>{{ exp.name }}</i>
@@ -56,7 +56,7 @@ import NameCard from '../components/NameCard.vue'
             </div>
           </div>
           <div class="border-style">
-            <p class="enableENDL">{{ exp.content }}</p>
+            <p class="enableENDL experience-content">{{ exp.content }}</p>
             <div class="tag-group">
               <Tag :name="tags" v-for="(tags, index2) in exp.tags" :key="index2" />
           </div>
@@ -68,14 +68,14 @@ import NameCard from '../components/NameCard.vue'
       <div class="section">
         <h2><p class="hash"># </p>Projects</h2>
         <div class="project" v-for="(proj, index) in projects" :key="index">
-          <div class="border-style project-content">
+          <div class="border-style project-head">
             <div class="project-title">
-              <i>{{ proj.title }}</i>
+              <i><a :href="proj.link" target="_blank" rel="noopener noreferrer">{{ proj.title }}</a></i>
             </div>
             <div>{{ proj.period }}</div>
           </div>
           <div class="border-style">
-            <p class="enableENDL">{{ proj.content }}</p>
+            <p class="enableENDL project-content">{{ proj.content }}</p>
             <div class="tag-group">
               <Tag :name="tags" v-for="(tags, index2) in proj.tags" :key="index2" />
           </div>
@@ -98,13 +98,13 @@ import NameCard from '../components/NameCard.vue'
       <div class="section">
         <h2><p class="hash"># </p>Activities</h2>
         <div class="other" v-for="(other, index) in others" :key="index">
-          <div class="border-style project-content">
+          <div class="border-style project-head">
             <div class="other-title">
-              <i>{{ other.title }}</i>
+              <i><a :href="other.link" target="_blank" rel="noopener noreferrer">{{ other.title }}</a></i>
             </div>
           </div>
           <div class="border-style">
-            <p class="enableENDL">{{ other.content }}</p>
+            <p class="enableENDL project-content">{{ other.content }}</p>
             <div class="tag-group">
               <Tag :name="tags" v-for="(tags, index2) in other.tags" :key="index2" />
           </div>
@@ -158,26 +158,31 @@ export default {
           title:"XZ-util report", period:"2024/05~2024/06",
           content:"- 靜態分析惡意後門：使用 Ghidra 逆向分析 liblzma5.so，透過函式交叉引用與控制流程圖 (CFG)追蹤可疑邏輯，成功識別內部修改點，還原其影響 OpenSSH 認證的行為模式。",
           tags: ["Cybersecurity", "Ghidra"],
+          link: "https://hackmd.io/@Beck049/BkeQuqv4R",
         },
         {
           title:"NTNU_ADMS", period:"2022/09 ~ 2023/01",
           content:"- 專案管理與流程優化：帶領 20+ 人開發團隊，規劃開發流程與監督進度，確保專案在時程內完成，成功將研究所申請系統100% 電子化，減少紙本作業時間與人力成本。\n- 全端開發與技術學習：負責前後端開發，使用 TypeScript + Vue.js 建構元件化前端、Go + MongoDB 優化後端效能，並提升自身對 NoSQL 資料庫的理解與應用能力。\n- 團隊培訓與技術支援：除了開發與管理，還協助內部教學與技術指導，提高團隊開發效率 25%，促進組員快速適應新技術與架構，確保專案順利進行。",
           tags: ["vue.ts", "Go", "MongoDB"],
+          link: "https://hackmd.io/@Beck049/ByGbUWj2yl",
         },
         {
           title:"Brain Tumor MRI", period:"2022/07~2023/06",
           content:"- 腦瘤 MRI 影像分析與分割：使用 CNN 與 instance segmentation 技術，自動辨識並標註腦瘤位置，模型達成 腫瘤檢測準確率 92%，顯著提升 MRI 影像診斷的自動化程度。\n- 深度學習框架應用：運用 MONAI 的 UNETR 進行影像標註，結合 PyTorch 訓練 CNN 模型，有效提升特徵提取能力。",
           tags: ["Pytorch", "CNN", "Machine Learning"],
+          link: "https://hackmd.io/@Beck049/rJyWcWs2kg",
         },
         {
           title:"師大暑期資工營", period:"2021/11~2022/07",
           content:"- 統籌與專案管理：擔任總籌，負責規劃 100 人規模 的資工營隊，制定時程並監督各組進度，確保所有講座、實作課程與活動順利執行，活動滿意度達 90%。\n- 跨組協調與廠商洽談：與多個廠商接洽，確保場地、設備、物資準時到位，同時支援各組運作，讓團隊能專注於內容規劃與互動。\n- 提升高中生對資工的認識：透過精心設計的課程與活動，使參與學生對大學資工系的了解度提高 85%（根據活動後問卷統計），成功激發學生對資訊科學的興趣。",
           tags: ["Leadership", "Teamwork"],
+          link: "https://hackmd.io/@Beck049/rJcIq-jn1g",
         },
         {
           title:"PokemonRL", period:"2023/09~2023/12",
           content:"- Deepened the understanding of reinforcement learning by implementing Deep Q-Learning (DQN) and training an agent to optimize its actions in a complex environment like Pokémon Red.",
           tags: ["Pyboy", "Stable Baselines 3", "Reinforce Learning"],
+          link: "https://hackmd.io/@Beck049/SJ4jt-j2yg",
         },
       ],
       certificates: [
@@ -190,21 +195,25 @@ export default {
           title:"Google Foobar 2023",
           content:"- honed my ability to break down complex problems and design effective solutions within a limited time frame.\n- Improving the problem-solving skills and the ability to think critically under pressure.",
           tags: ["Python"],
+          link: "https://hackmd.io/@Beck049/r1ji9Wjn1e",
         },
         {
           title:"Normal Game Jam 2024",
           content:"- Gained hands-on experience in using Godot to develop a 2D dungeon puzzle game, improving skills in game engine usage.\n- The tight development timeline taught me how to manage time effectively.",
           tags: ["Godot"],
+          link: "https://hackmd.io/@Beck049/SkRbpirwA",
         },
         {
           title:"SEEDLab",
           content:"- Through hands-on exercises like Buffer Overflow, SQL Injection, and ARP Spoofing, you gained practical experience in identifying and understanding common vulnerabilities and attack techniques.",
           tags: ["Cybersecurity"],
+          link: "https://hackmd.io/@Beck049/B12vKZi3ke",
         },
         {
           title:"XV6",
           content:"- Deepened the understanding of critical OS mechanisms, such as system calls, process management, memory management, and file systems, by implementing them within the xv6 kernel.\n- Gained hands-on experience modifying and expanding the xv6 kernel.",
           tags: ["Operating System"],
+          link: "https://hackmd.io/@Beck049/HyssOKkZR",
         },
       ],
     };
@@ -289,6 +298,7 @@ export default {
 .border-style {
   border: 1px solid var(--gray-text);
 }
+
 .image-center {
   display: flex;
   justify-content: center;
@@ -309,6 +319,7 @@ export default {
 
 /* Content Display */
 .about {
+  color: var(--content-color);
   padding: 12px;
 }
   /* Education */
@@ -339,7 +350,7 @@ export default {
   flex-direction: row;
   max-height: fit-content;
 }
-.experience-content {
+.experience-data {
   width:100%;
   display: flex;
   flex-direction: row;
@@ -357,7 +368,11 @@ export default {
 .experience-title i:first-child{
   font-size: 1.2rem;
 }
-  /* Skill */
+.experience-content{
+  color: var(--content-color);
+}
+  
+/* Skill */
 .skill-group {
   display: flex;
   flex-wrap: wrap;
@@ -378,17 +393,23 @@ export default {
   justify-content: center;
   padding:5px;
 }
+.skill-list{
+  color: var(--content-color);
+}
   /* Project */
 .project {
   width:100%;
 }
-.project-content {
+.project-head {
   width:100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 0px 10px;
+}
+.project-content{
+  color: var(--content-color);
 }
 .project-title {
   color: var(--gray-text);
