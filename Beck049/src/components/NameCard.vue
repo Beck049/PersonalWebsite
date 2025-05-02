@@ -11,12 +11,23 @@
                     <i> <SocialMediaLink fileName="Youtube.png" url="https://youtube.com" /> </i>
                 </div>
             </div>
-            <ul class="data-group__title">
-                <li>叡揚資訊股份有限公司｜助理程式設計師</li>
-                <li>國立台灣師範大學｜資訊工程學系 大學畢業</li>
-            </ul>
-            <div class="data-group__descript">
-                我是一名對資訊技術充滿熱情的學生，專注於軟體開發、機器學習與資安研究。擁有豐富的專案經驗，如「師大資工線上申請系統」、醫療影像分析與遊戲開發，並具備專案管理與團隊協作能力，樂於迎接技術挑戰並持續精進。
+            <div v-if="lang==0">
+                <ul class="data-group__title">
+                    <li>叡揚資訊股份有限公司｜助理程式設計師</li>
+                    <li>國立清華大學｜資訊工程學系 碩士</li>
+                </ul>
+                <div class="data-group__descript">
+                    我是一名對資訊技術充滿熱情的學生，專注於軟體開發、機器學習與資安研究。擁有豐富的專案經驗，如「師大資工線上申請系統」、醫療影像分析與遊戲開發，並具備專案管理與團隊協作能力，樂於迎接技術挑戰並持續精進。
+                </div>
+            </div>
+            <div v-if="lang==1">
+                <ul class="data-group__title">
+                    <li>GSS Corp.｜Assistant Software Engineer</li>
+                    <li>NTHU｜M.S. in Computer Science</li>
+                </ul>
+                <div class="data-group__descript">
+                    Computer science student passionate about software development, machine learning, and cybersecurity. Experienced in web systems, medical image analysis, and game development. Always eager to tackle new challenges and grow through hands-on projects.
+                </div>
             </div>
             <div class="tag-group">
                 <Tag name="Python"/>
@@ -33,7 +44,18 @@
 <script setup lang="ts">
 import SocialMediaLink from '../components/SocialMediaLink.vue'
 import Tag from '../components/Tag.vue'
-import { ref, onMounted, onUnmounted } from "vue";
+import { ref, onMounted, onUnmounted } from "vue"
+</script>
+
+<script lang="ts">
+export default {
+    props: {
+        lang: {
+            type: Number,
+            required: true,
+        }
+    }
+}
 
 // Card Animation
 const card = ref<HTMLElement | null>(null);
