@@ -68,7 +68,7 @@ const receiveLang = (value: number) => {
                 <i>{{ exp.title[lang] }}</i>
                 <i>{{ exp.name[lang] }}</i>
               </div>
-              <div>{{ exp.period }}</div>
+              <div class="text-color">{{ exp.period }}</div>
             </div>
           </div>
           <div class="border-style">
@@ -88,7 +88,7 @@ const receiveLang = (value: number) => {
             <div class="project-title">
               <i><a :href="proj.link" target="_blank" rel="noopener noreferrer">{{ proj.title[lang] }}</a></i>
             </div>
-            <div>{{ proj.period }}</div>
+            <div class="text-color">{{ proj.period }}</div>
           </div>
           <div class="border-style">
             <p class="enableENDL project-content">{{ proj.content[lang] }}</p>
@@ -218,16 +218,22 @@ export default {
           link: "https://hackmd.io/@Beck049/SJ4jt-j2yg",
         },
         {
-          title:"Google Foobar 2023",
-          content:"- honed my ability to break down complex problems and design effective solutions within a limited time frame.\n- Improving the problem-solving skills and the ability to think critically under pressure.",
-          tags: ["Python"],
-          link: "https://hackmd.io/@Beck049/r1ji9Wjn1e",
+          title:"Normal Game Jam 2025",
+          content:"- Participated in a Game Jam and developed a 2D rope parkour game using Godot, achieving second place in the competition.\n- Built upon last year's experience by focusing on improving the development workflow, leading to significant enhancements in game architecture design and collaborative development practices.",
+          tags: ["Godot"],
+          link: "https://hackmd.io/@Beck049/SJrlI48xll",
         },
         {
           title:"Normal Game Jam 2024",
           content:"- Gained hands-on experience in using Godot to develop a 2D dungeon puzzle game, improving skills in game engine usage.\n- The tight development timeline taught me how to manage time effectively.",
           tags: ["Godot"],
           link: "https://hackmd.io/@Beck049/SkRbpirwA",
+        },
+        {
+          title:"Google Foobar 2023",
+          content:"- honed my ability to break down complex problems and design effective solutions within a limited time frame.\n- Improving the problem-solving skills and the ability to think critically under pressure.",
+          tags: ["Python"],
+          link: "https://hackmd.io/@Beck049/r1ji9Wjn1e",
         },
         {
           title:"SEEDLab",
@@ -263,6 +269,9 @@ export default {
 
 <style scoped>
 /* Base Layout */
+.text-color{
+  color: var(--content-color);
+}
 .profile-page {
   display: flex;
   flex-wrap: wrap;
@@ -283,6 +292,7 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  color: var(--content-color);
   border: 1px solid var(--gray-text);
   border-radius: 20px;
   padding: 28px 32px;

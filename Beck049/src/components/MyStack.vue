@@ -138,6 +138,7 @@ h3 {
   font-size: 4rem;
 }
 h4 {
+  color: var(--primary);
   font-size: 2rem;
 }
 p {

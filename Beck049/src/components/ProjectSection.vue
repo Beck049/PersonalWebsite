@@ -59,6 +59,9 @@ import Tag from '../components/Tag.vue'
   position: relative;
 }
 
+.project-period {
+  color: var(--content-color);
+}
 .project-head {
   display: flex;
   flex-direction: column;
@@ -75,7 +78,7 @@ import Tag from '../components/Tag.vue'
   background: radial-gradient(farthest-corner, var(--primary), #2C2C2C99);
   padding: 1rem;
   border-radius: 0.5rem;
-
+  color: var(--content-color);
   font-weight: bold;
 }
 .project-title {
