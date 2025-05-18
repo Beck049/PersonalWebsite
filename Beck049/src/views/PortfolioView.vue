@@ -212,6 +212,12 @@ export default {
       ],
       others: [
         {
+          title:"Next.js middleware bypass", period:"2025/04~2025/05",
+          content:"- Researched a Next.js middleware bypass vulnerability by reproducing the exploit and studying mitigations, gaining practical insight into web security flaws and defensive strategies.",
+          tags: ["Cybersecurity", "Web"],
+          link: "https://hackmd.io/@Beck049/H166W4Lpke",
+        },
+        {
           title:"PokemonRL", period:"2023/09~2023/12",
           content:"- Deepened the understanding of reinforcement learning by implementing Deep Q-Learning (DQN) and training an agent to optimize its actions in a complex environment like Pokémon Red.",
           tags: ["Pyboy", "Stable Baselines 3", "Reinforce Learning"],
