@@ -212,6 +212,12 @@ export default {
       ],
       others: [
         {
+          title:"AI Cup - Medical SPII Detection", period:"2025/05~2025/06",
+          content:"- Model Fine-tuning：Fine-tuned Whisper and DeepSeek for ASR and NER on medical speech data.\n- Efficient Training：Used AMP, LoRA, and 4-bit quantization to train models on 6GB GPU.\n- Data Preparation：Built modules for mel spectrograms, tokenization, and audio augmentation.\n- Resource Optimization：Adjusted batch size, applied gradient accumulation and checkpointing to train large models on limited GPU memory.",
+          tags: ["Pytorch", "Transformers", "Whisper"],
+          link: "https://hackmd.io/@Beck049/Sygh77Lb7gl",
+        },
+        {
           title:"Next.js middleware bypass", period:"2025/04~2025/05",
           content:"- Researched a Next.js middleware bypass vulnerability by reproducing the exploit and studying mitigations, gaining practical insight into web security flaws and defensive strategies.",
           tags: ["Cybersecurity", "Web"],
