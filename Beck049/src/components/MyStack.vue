@@ -76,6 +76,9 @@ const technologies = [
   { name: "kali", src: "/icons/tools/kali.png" },
   { name: "ghidra", src: "/icons/tools/ghidra.png" },
   { name: "wireshark", src: "/icons/tools/wireshark.png" },
+  { name: "burpSuite", src: "/icons/tools/burpSuite.png" },
+  { name: "Jenkins", src: "/icons/tools/jenkins.png" },
+  { name: "Playwright", src: "/icons/tools/Playwright.png" },
 ];
 
 const setFloat = () => {

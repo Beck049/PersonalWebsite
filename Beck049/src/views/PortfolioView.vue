@@ -72,7 +72,7 @@ const receiveLang = (value: number) => {
             </div>
           </div>
           <div class="border-style">
-            <p class="enableENDL experience-content">{{ exp.content[lang] }}</p>
+            <p class="enableENDL experience-content" v-html="exp.content[lang]"></p>
             <div class="tag-group">
               <Tag :name="tags" v-for="(tags, index2) in exp.tags" :key="index2" />
           </div>
@@ -91,7 +91,7 @@ const receiveLang = (value: number) => {
             <div class="text-color">{{ proj.period }}</div>
           </div>
           <div class="border-style">
-            <p class="enableENDL project-content">{{ proj.content[lang] }}</p>
+            <p class="enableENDL project-content" v-html="proj.content[lang]"></p>
             <div class="tag-group">
               <Tag :name="tags" v-for="(tags, index2) in proj.tags" :key="index2" />
           </div>
@@ -120,7 +120,7 @@ const receiveLang = (value: number) => {
             </div>
           </div>
           <div class="border-style">
-            <p class="enableENDL project-content">{{ other.content }}</p>
+            <p class="enableENDL project-content" v-html="other.content[lang]"></p>
             <div class="tag-group">
               <Tag :name="tags" v-for="(tags, index2) in other.tags" :key="index2" />
           </div>
@@ -163,44 +163,52 @@ export default {
       ],
       experiences: [
         {
+          img:"/icons/PChome.png", name:["網路家庭國際資訊(股)公司", "PChome Online Corporation"], title:["軟體工程師", "Software Engineer"], period:"2025/06 ~ 2026/07",
+          content:["<b style='font-weight:900;font-size:1rem;'>- 自動化 CI/CD 串接監控平台：</b>建置 GitHub Action、Jenkins 自動化流程，串接 Webhook、GCP、SonarQube ，提升自動化流程效率 40%，降低部門間溝通成本。\n<b style='font-weight:900;font-size:1rem;'>- 導入 Playwright 提升測試覆蓋：</b>將 Rapi 測試 100% 遷移至 Playwright ，並提升自動化覆蓋率至 60%，優化維護性。\n<b style='font-weight:900;font-size:1rem;'>- 建置低耦合 POM 測試框架：</b>設計 POM 架構，減少測試耦合，提升測試模組化與可維護性。",
+                  "<b style='font-weight:900;font-size:1rem;'>- Automated CI/CD and Monitoring Integration:</b> Built automated pipelines with GitHub Actions and Jenkins, integrated Webhook, GCP, and SonarQube, improving workflow efficiency by 40% and reducing interdepartmental communication costs.\n<b style='font-weight:900;font-size:1rem;'>- Migrated to Playwright for Test Coverage Improvement:</b> Fully migrated Rapi tests to Playwright, increasing automation coverage to 60% and enhancing maintainability.\n<b style='font-weight:900;font-size:1rem;'>- Developed Low-Coupling POM Test Framework:</b> Designed a Page Object Model (POM) framework to reduce coupling, improving modularity and maintainability of test code."],
+          tags: ["Jenkins", "Playwright", "CI/CD"],
+        },
+        {
           img:"/icons/GSS.png", name:["叡揚資訊股份有限公司", "Galaxy Software Services Corporation"], title:["助理全端程式設計師", "Assistant Software Engineer"], period:"2023/01 ~ 2023/07",
-          content:["- 開發跨服務整合平台：設計並實作自動流程圖介面，整合公司 SaaS 服務以及 Google 相關功能，提升自動化流程效率 40%，降低客戶手動設定時間。\n- 串接 SHOPLINE API：負責 API 串接，讓公司服務無縫連接外部電商平台，成功擴展 5+ 家合作企業，提高企業應用靈活度。\n- 提升系統效能與維護性：使用 React.js、MySQL、.NET framework 進行開發與優化",
-                  "- Cross-Service Integration: Designed an automated flowchart interface, integrating SaaS and Go Google services to boost automation by 40% and reduce setup time.\n-  SHOPLINE API Integration: Led API integration, expanding partnerships with 5+ businesses and enhancing platform flexibility.\n- System Optimization: Improved performance and maintainability using React.js, MySQL, and .NET."],
+          content:["<b style='font-weight:900;font-size:1rem;'>- 開發跨服務整合平台：</b>設計並實作自動流程圖介面，整合公司 SaaS 服務以及 Google 相關功能，提升自動化流程效率 40%，降低客戶手動設定時間。\n<b style='font-weight:900;font-size:1rem;'>- 串接 SHOPLINE API：</b>負責 API 串接，讓公司服務無縫連接外部電商平台，成功擴展 5+ 家合作企業，提高企業應用靈活度。\n<b style='font-weight:900;font-size:1rem;'>- 提升系統效能與維護性：</b>使用 React.js、MySQL、.NET framework 進行開發與優化",
+                  "<b style='font-weight:900;font-size:1rem;'>- Cross-Service Integration:</b> Designed an automated flowchart interface, integrating SaaS and Go Google services to boost automation by 40% and reduce setup time.\n <b style='font-weight:900;font-size:1rem;'>- SHOPLINE API Integration:</b> Led API integration, expanding partnerships with 5+ businesses and enhancing platform flexibility.\n<b style='font-weight:900;font-size:1rem;'>- System Optimization:</b> Improved performance and maintainability using React.js, MySQL, and .NET."],
           tags: [".Net Framework", "React.js", "MySQL"],
         },
       ],
       skills: [
         { title: "Language", elements: ["C/C++ Python", "javascript Go"], },
         { title: "Frontend", elements: ["vue.js", "React.js"], },
-        { title: "Backend", elements: ["node.js", "GraphQL"], },
+        { title: "Backend", elements: ["node.js", "gin", "GraphQL"], },
         { title: "Database", elements: ["MySQL", "MongoDB", "PostgreSQL"], },
+        { title: "test", elements: ["Selenium", "Playwright"], },
+        { title: "CI/CD", elements: ["Github Action", "Jenkins"], },
       ],
       projects: [
         {
           title:["XZ-util report", "XZ-util report"], period:"2024/05~2024/06",
-          content:["- 靜態分析惡意後門：使用 Ghidra 逆向分析 liblzma5.so，透過函式交叉引用與控制流程圖 (CFG)追蹤可疑邏輯，成功識別內部修改點，還原其影響 OpenSSH 認證的行為模式。",
-                  "- Static Analysis of a Malicious Backdoor: Using Ghidra, I reverse-engineered liblzma5.so, traced suspicious logic via CFG and cross-references, and identified modifications affecting OpenSSH authentication."],
+          content:["<b style='font-weight:900;font-size:1rem;'>- 靜態分析惡意後門：</b>使用 Ghidra 逆向分析 liblzma5.so，透過函式交叉引用與控制流程圖 (CFG)追蹤可疑邏輯，成功識別內部修改點，還原其影響 OpenSSH 認證的行為模式。",
+                  "<b style='font-weight:900;font-size:1rem;'>- Static Analysis of a Malicious Backdoor: </b>Using Ghidra, I reverse-engineered liblzma5.so, traced suspicious logic via CFG and cross-references, and identified modifications affecting OpenSSH authentication."],
           tags: ["Cybersecurity", "Ghidra"],
           link: "https://hackmd.io/@Beck049/BkeQuqv4R",
         },
         {
           title:["NTNU_ADMS (大學申請系統)", "NTNU_ADMS (Admission System)"], period:"2022/09 ~ 2023/01",
-          content:["- 專案管理與流程優化：帶領 20+ 人開發團隊，規劃開發流程與監督進度，確保專案在時程內完成，成功將研究所申請系統100% 電子化，減少紙本作業時間與人力成本。\n- 全端開發與技術學習：負責前後端開發，使用 TypeScript + Vue.js 建構元件化前端、Go + MongoDB 優化後端效能，並提升自身對 NoSQL 資料庫的理解與應用能力。\n- 團隊培訓與技術支援：除了開發與管理，還協助內部教學與技術指導，提高團隊開發效率 25%，促進組員快速適應新技術與架構，確保專案順利進行。",
-                  "- Project Management & Process Optimization: Led a 20+ member team, overseeing development and ensuring timely completion. Successfully digitized 100% of the graduate application system, reducing paperwork and labor costs.\n- Full-Stack Development & Technical Growth: Developed both front and back end using TypeScript + Vue.js for a component-based frontend and Go + MongoDB to optimize backend performance, deepening expertise in NoSQL databases.\n- Team Training & Technical Support: Provided internal training and guidance, boosting team efficiency by 25% and accelerating adaptation to new technologies, ensuring smooth project execution."],
+          content:["<b style='font-weight:900;font-size:1rem;'>- 專案管理與流程優化：</b>帶領 20+ 人開發團隊，規劃開發流程與監督進度，確保專案在時程內完成，成功將研究所申請系統100% 電子化，減少紙本作業時間與人力成本。\n<b style='font-weight:900;font-size:1rem;'>- 全端開發與技術學習：</b>負責前後端開發，使用 TypeScript + Vue.js 建構元件化前端、Go + MongoDB 優化後端效能，並提升自身對 NoSQL 資料庫的理解與應用能力。\n<b style='font-weight:900;font-size:1rem;'>- 團隊培訓與技術支援：</b>除了開發與管理，還協助內部教學與技術指導，提高團隊開發效率 25%，促進組員快速適應新技術與架構，確保專案順利進行。",
+                  "<b style='font-weight:900;font-size:1rem;'>- Project Management & Process Optimization:</b> Led a 20+ member team, overseeing development and ensuring timely completion. Successfully digitized 100% of the graduate application system, reducing paperwork and labor costs.\n<b style='font-weight:900;font-size:1rem;'>- Full-Stack Development & Technical Growth:</b> Developed both front and back end using TypeScript + Vue.js for a component-based frontend and Go + MongoDB to optimize backend performance, deepening expertise in NoSQL databases.\n<b style='font-weight:900;font-size:1rem;'>- Team Training & Technical Support:</b> Provided internal training and guidance, boosting team efficiency by 25% and accelerating adaptation to new technologies, ensuring smooth project execution."],
           tags: ["vue.ts", "Go", "MongoDB"],
           link: "https://hackmd.io/@Beck049/ByGbUWj2yl",
         },
         {
           title:["腦瘤 MRI 影像偵測", "Brain Tumor MRI Detection"], period:"2022/07~2023/06",
-          content:["- 腦瘤 MRI 影像分析與分割：使用 CNN 與 instance segmentation 技術，自動辨識並標註腦瘤位置，模型達成 腫瘤檢測準確率 92%，顯著提升 MRI 影像診斷的自動化程度。\n- 深度學習框架應用：運用 MONAI 的 UNETR 進行影像標註，結合 PyTorch 訓練 CNN 模型，有效提升特徵提取能力。",
-                  "- Brain Tumor MRI Analysis & Segmentation: Used CNN and instance segmentation to detect and annotate tumors, achieving 92% accuracy and enhancing MRI diagnosis automation.\n- Deep Learning Framework Application: Applied MONAI's UNETR for image annotation and trained CNN models with PyTorch to improve feature extraction."],
+          content:["<b style='font-weight:900;font-size:1rem;'>- 腦瘤 MRI 影像分析與分割：</b>使用 CNN 與 instance segmentation 技術，自動辨識並標註腦瘤位置，模型達成 腫瘤檢測準確率 92%，顯著提升 MRI 影像診斷的自動化程度。\n<b style='font-weight:900;font-size:1rem;'>- 深度學習框架應用：</b>運用 MONAI 的 UNETR 進行影像標註，結合 PyTorch 訓練 CNN 模型，有效提升特徵提取能力。",
+                  "<b style='font-weight:900;font-size:1rem;'>- Brain Tumor MRI Analysis & Segmentation:</b> Used CNN and instance segmentation to detect and annotate tumors, achieving 92% accuracy and enhancing MRI diagnosis automation.\n<b style='font-weight:900;font-size:1rem;'>- Deep Learning Framework Application:</b> Applied MONAI's UNETR for image annotation and trained CNN models with PyTorch to improve feature extraction."],
           tags: ["Pytorch", "CNN", "Machine Learning"],
           link: "https://hackmd.io/@Beck049/rJyWcWs2kg",
         },
         {
           title:["師大暑期資工營", "NTNU Summer Computer Science Camp"], period:"2021/11~2022/07",
-          content:["- 統籌與專案管理：擔任總籌，負責規劃 100 人規模 的資工營隊，制定時程並監督各組進度，確保所有講座、實作課程與活動順利執行，活動滿意度達 90%。\n- 跨組協調與廠商洽談：與多個廠商接洽，確保場地、設備、物資準時到位，同時支援各組運作，讓團隊能專注於內容規劃與互動。\n- 提升高中生對資工的認識：透過精心設計的課程與活動，使參與學生對大學資工系的了解度提高 85%（根據活動後問卷統計），成功激發學生對資訊科學的興趣。",
-                  "- Leadership & Project Management: Led a 100+ person computer science camp, planning schedules, overseeing progress, and ensuring smooth execution of lectures, workshops, and activities,achieving a 90% satisfaction rate\n- Cross-Team Coordination & Vendor Negotiation: Managed vendor communications to secure venues, equipment, and materials on time while supporting teams in content planning and engagement.\n- Enhancing High School Students' CS Awareness: Designed interactive courses and activities, increasing participants' understanding of CS programs by 85% (post-event survey), successfully sparking interest in computer science."],
+          content:["<b style='font-weight:900;font-size:1rem;'>- 統籌與專案管理：</b>擔任總籌，負責規劃 100 人規模 的資工營隊，制定時程並監督各組進度，確保所有講座、實作課程與活動順利執行，活動滿意度達 90%。\n<b style='font-weight:900;font-size:1rem;'>- 跨組協調與廠商洽談：</b>與多個廠商接洽，確保場地、設備、物資準時到位，同時支援各組運作，讓團隊能專注於內容規劃與互動。\n<b style='font-weight:900;font-size:1rem;'>- 提升高中生對資工的認識：</b>透過精心設計的課程與活動，使參與學生對大學資工系的了解度提高 85%（根據活動後問卷統計），成功激發學生對資訊科學的興趣。",
+                  "<b style='font-weight:900;font-size:1rem;'>- Leadership & Project Management:</b> Led a 100+ person computer science camp, planning schedules, overseeing progress, and ensuring smooth execution of lectures, workshops, and activities,achieving a 90% satisfaction rate\n<b style='font-weight:900;font-size:1rem;'>- Cross-Team Coordination & Vendor Negotiation:</b> Managed vendor communications to secure venues, equipment, and materials on time while supporting teams in content planning and engagement.\n<b style='font-weight:900;font-size:1rem;'>- Enhancing High School Students' CS Awareness:</b> Designed interactive courses and activities, increasing participants' understanding of CS programs by 85% (post-event survey), successfully sparking interest in computer science."],
           tags: ["Leadership", "Teamwork"],
           link: "https://hackmd.io/@Beck049/rJcIq-jn1g",
         },
@@ -213,49 +221,57 @@ export default {
       others: [
         {
           title:"AI Cup - Medical SPII Detection", period:"2025/05~2025/06",
-          content:"- Model Fine-tuning：Fine-tuned Whisper and DeepSeek for ASR and NER on medical speech data.\n- Efficient Training：Used AMP, LoRA, and 4-bit quantization to train models on 6GB GPU.\n- Data Preparation：Built modules for mel spectrograms, tokenization, and audio augmentation.\n- Resource Optimization：Adjusted batch size, applied gradient accumulation and checkpointing to train large models on limited GPU memory.",
+          content:["<b style='font-weight:900;font-size:1rem;'>- 模型微調：</b>對 Whisper 和 DeepSeek 進行語音辨識 (ASR) 與命名實體辨識 (NER) 的醫療語音資料微調。\n<b style='font-weight:900;font-size:1rem;'>- 高效訓練：</b>使用 AMP、LoRA 與 4-bit 量化，在 6GB GPU 上訓練模型。\n<b style='font-weight:900;font-size:1rem;'>- 資料準備：</b>開發 Mel spectrogram、分詞與音檔增強等資料處理模組。\n<b style='font-weight:900;font-size:1rem;'>- 資源優化：</b>透過調整 batch size、梯度累積與 checkpointing，在有限 GPU 記憶體下訓練大型模型。",
+                  "<b style='font-weight:900;font-size:1rem;'>- Model Fine-tuning:</b> Fine-tuned Whisper and DeepSeek for ASR and NER on medical speech data.\n<b style='font-weight:900;font-size:1rem;'>- Efficient Training:</b> Used AMP, LoRA, and 4-bit quantization to train models on 6GB GPU.\n<b style='font-weight:900;font-size:1rem;'>- Data Preparation:</b> Built modules for mel spectrograms, tokenization, and audio augmentation.\n<b style='font-weight:900;font-size:1rem;'>- Resource Optimization:</b> Adjusted batch size, applied gradient accumulation and checkpointing to train large models on limited GPU memory."],
           tags: ["Pytorch", "Transformers", "Whisper"],
           link: "https://hackmd.io/@Beck049/Sygh77Lb7gl",
         },
         {
           title:"Next.js middleware bypass", period:"2025/04~2025/05",
-          content:"- Researched a Next.js middleware bypass vulnerability by reproducing the exploit and studying mitigations, gaining practical insight into web security flaws and defensive strategies.",
+          content:["- Researched a Next.js middleware bypass vulnerability by reproducing the exploit and studying mitigations, gaining practical insight into web security flaws and defensive strategies.",
+                  "- Researched a Next.js middleware bypass vulnerability by reproducing the exploit and studying mitigations, gaining practical insight into web security flaws and defensive strategies."],
           tags: ["Cybersecurity", "Web"],
           link: "https://hackmd.io/@Beck049/H166W4Lpke",
         },
         {
           title:"PokemonRL", period:"2023/09~2023/12",
-          content:"- Deepened the understanding of reinforcement learning by implementing Deep Q-Learning (DQN) and training an agent to optimize its actions in a complex environment like Pokémon Red.",
+          content:["- Deepened the understanding of reinforcement learning by implementing Deep Q-Learning (DQN) and training an agent to optimize its actions in a complex environment like Pokémon Red.",
+                  "- Deepened the understanding of reinforcement learning by implementing Deep Q-Learning (DQN) and training an agent to optimize its actions in a complex environment like Pokémon Red."],
           tags: ["Pyboy", "Stable Baselines 3", "Reinforce Learning"],
           link: "https://hackmd.io/@Beck049/SJ4jt-j2yg",
         },
         {
           title:"Normal Game Jam 2025",
-          content:"- Participated in a Game Jam and developed a 2D rope parkour game using Godot, achieving second place in the competition.\n- Built upon last year's experience by focusing on improving the development workflow, leading to significant enhancements in game architecture design and collaborative development practices.",
+          content:["- Participated in a Game Jam and developed a 2D rope parkour game using Godot, achieving second place in the competition.\n- Built upon last year's experience by focusing on improving the development workflow, leading to significant enhancements in game architecture design and collaborative development practices.",
+                  "- Participated in a Game Jam and developed a 2D rope parkour game using Godot, achieving second place in the competition.\n- Built upon last year's experience by focusing on improving the development workflow, leading to significant enhancements in game architecture design and collaborative development practices."],
           tags: ["Godot"],
           link: "https://hackmd.io/@Beck049/SJrlI48xll",
         },
         {
           title:"Normal Game Jam 2024",
-          content:"- Gained hands-on experience in using Godot to develop a 2D dungeon puzzle game, improving skills in game engine usage.\n- The tight development timeline taught me how to manage time effectively.",
+          content:["- Gained hands-on experience in using Godot to develop a 2D dungeon puzzle game, improving skills in game engine usage.\n- The tight development timeline taught me how to manage time effectively.",
+                  "- Gained hands-on experience in using Godot to develop a 2D dungeon puzzle game, improving skills in game engine usage.\n- The tight development timeline taught me how to manage time effectively."],
           tags: ["Godot"],
           link: "https://hackmd.io/@Beck049/SkRbpirwA",
         },
         {
           title:"Google Foobar 2023",
-          content:"- honed my ability to break down complex problems and design effective solutions within a limited time frame.\n- Improving the problem-solving skills and the ability to think critically under pressure.",
+          content:["- honed my ability to break down complex problems and design effective solutions within a limited time frame.\n- Improving the problem-solving skills and the ability to think critically under pressure.",
+                  "- honed my ability to break down complex problems and design effective solutions within a limited time frame.\n- Improving the problem-solving skills and the ability to think critically under pressure."],
           tags: ["Python"],
           link: "https://hackmd.io/@Beck049/r1ji9Wjn1e",
         },
         {
           title:"SEEDLab",
-          content:"- Through hands-on exercises like Buffer Overflow, SQL Injection, and ARP Spoofing, you gained practical experience in identifying and understanding common vulnerabilities and attack techniques.",
+          content:["- Through hands-on exercises like Buffer Overflow, SQL Injection, and ARP Spoofing, you gained practical experience in identifying and understanding common vulnerabilities and attack techniques.",
+                  "- Through hands-on exercises like Buffer Overflow, SQL Injection, and ARP Spoofing, you gained practical experience in identifying and understanding common vulnerabilities and attack techniques."],
           tags: ["Cybersecurity"],
           link: "https://hackmd.io/@Beck049/B12vKZi3ke",
         },
         {
           title:"XV6",
-          content:"- Deepened the understanding of critical OS mechanisms, such as system calls, process management, memory management, and file systems, by implementing them within the xv6 kernel.\n- Gained hands-on experience modifying and expanding the xv6 kernel.",
+          content:["- Deepened the understanding of critical OS mechanisms, such as system calls, process management, memory management, and file systems, by implementing them within the xv6 kernel.\n- Gained hands-on experience modifying and expanding the xv6 kernel.",
+                  "- Deepened the understanding of critical OS mechanisms, such as system calls, process management, memory management, and file systems, by implementing them within the xv6 kernel.\n- Gained hands-on experience modifying and expanding the xv6 kernel."],
           tags: ["Operating System"],
           link: "https://hackmd.io/@Beck049/HyssOKkZR",
         },

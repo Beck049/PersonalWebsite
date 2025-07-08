@@ -5,7 +5,7 @@ import SocialMediaLink from '../components/SocialMediaLink.vue'
 import WhatIDo from '../components/WhatIDo.vue'
 import MyStack from '../components/MyStack.vue'
 
-const titles = ["Frontend Developer", "Fullstack Developer", "Cybersecurity Analyst"];
+const titles = ["Software Engineer", "Fullstack Developer", "Cybersecurity Analyst"];
 const displayText = ref("");
 let i = 0, j = 0, isDeleting = false;
 
