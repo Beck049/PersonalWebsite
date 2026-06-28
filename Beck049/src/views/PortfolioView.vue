@@ -148,8 +148,8 @@ export default {
       isHidden: false,
       positionY: 0,
       about: [
-        "我是一名對資訊技術充滿熱情的學生，專注於程式設計及各種技術領域的探索。\n\n從大學開始，我逐漸找到對程式的興趣，並在不同領域的專案中磨練自己的技能。無論是醫療影像分析、Web開發、遊戲設計，還是資安領域，我都深入研究並實作相關技術。特別是在「師大資工線上申請系統」專案中，我擔任專案經理，負責規劃與管理專案進度，並協助團隊進行前後端開發。\n\n我具備果斷的決策力、強大的意志力以及良好的團隊合作精神，並喜歡追根究底地解決問題。這些特質讓我在挑戰中不斷成長，並能夠在壓力下有效應對各種挑戰，保持高效的工作表現。",
-        'I am a passionate student in information technology, focusing on programming and exploring various technical fields.\n\nSince university, I have honed my skills through projects in medical image analysis, web development, game design, and cybersecurity. Notably, as the project manager for the "NTNU Computer Science Online Application System," I oversaw planning, progress management, and full stack development.\n\nWith strong decision-making, willpower, and teamwork skills, I thrive on solving complex problems, tackling challenges under pressure, and maintaining high efficiency.',
+        "我是一名對技術充滿熱情、兼具學術研究深度與產業實務經驗的清大資工碩士生。我擅長從底層追根究底解決複雜問題，並在 AI 醫療影像、生醫演算法、Web 開發 與 雲端架構 等多元領域皆有深入的實作經驗。\n\n目前在清大資工碩士班中，我正專注於研究 circular RNA (circRNA) 疫苗的合成演算法，致力於透過計算科學優化下一代疫苗的結構穩定性與轉譯效率。深刻考驗著我處理高複雜度演算法與底層效能優化的能力，也讓我學會如何以更追根究底的科學視角去應對未知的技術挑戰。\n\n在專注於本業學術研究的同時，我也積極透過業界實務來驗證並深化自己的工程能力。我曾於叡揚資訊擔任助理全端程式設計師，開發跨服務整合平台，透過設計自動流程圖介面與串接 SHOPLINE API，為企業提升了 40% 的自動化流程效率，並成功擴展多家合作企業。目前我則在 PChome 擔任測試工程師，從零開始建構 Playwright E2E 測試框架，達成 97% 覆蓋率，同時也使用 docker 建置了結合串接 SonarQube、Grafana 與 GCP 的 CI/CD 流程，提升了 40% 的部署效率並落實視覺化監控。\n\n結合在學術與業界累積的實務經驗，我已具備優秀的系統程式架構能力與獨立從零建立專案(0 to 1)的即戰力。與此同時，這些經驗也讓我在挑戰中不斷成長，並能夠在壓力下有效應對各種挑戰，保持高效的工作表現。",
+        "I am a highly motivated Computer Science Master's student at National Tsing Hua University (NTHU), combining academic depth with hands-on industry experience. Driven by a first-principles approach to solving complex problems, I possess a proven track record across diverse domains, including AI medical imaging, biomedical algorithms, web development, and cloud architecture.\n\nCurrently, my graduate research focuses on developing synthesis algorithms for circular RNA (circRNA) vaccines. By leveraging computational science to optimize structural stability and translation efficiency for next-generation vaccines, I consistently tackle high-complexity algorithms and low-level performance optimization—honing my ability to address unknown technical challenges with scientific rigor.\n\nIn parallel with my academic pursuits, I actively validate and sharpen my engineering skills through industry experience. As an Assistant Full-Stack Developer at GSS, I developed a cross-service integration platform. By designing an automated flowchart interface and integrating the SHOPLINE API, I boosted enterprise workflow automation efficiency by 40% and successfully expanded our corporate client base. Currently, as a QA Engineer at PChome, I built a Playwright E2E testing framework from scratch, achieving 97% test coverage. I also established a Docker-based CI/CD pipeline integrated with SonarQube, Grafana, and GCP, which accelerated deployment efficiency by 40% and enabled robust visual monitoring.\n\nBlending academic insights with industry expertise, I have developed strong system architecture skills and the '0-to-1' capability to launch projects from the ground up. These experiences have reshaped my resilience, enabling me to thrive under pressure and consistently deliver high-performance results.",
       ],
       educations: [
         {
@@ -164,26 +164,35 @@ export default {
       experiences: [
         {
           img:"/icons/PChome.png", name:["網路家庭國際資訊(股)公司", "PChome Online Corporation"], title:["軟體工程師", "Software Engineer"], period:"2025/06 ~ 2026/07",
-          content:["<b style='font-weight:900;font-size:1rem;'>- 自動化 CI/CD 串接監控平台：</b>建置 GitHub Action、Jenkins 自動化流程，串接 Webhook、GCP、SonarQube ，提升自動化流程效率 40%，降低部門間溝通成本。\n<b style='font-weight:900;font-size:1rem;'>- 導入 Playwright 提升測試覆蓋：</b>將 Rapi 測試 100% 遷移至 Playwright ，並提升自動化覆蓋率至 60%，優化維護性。\n<b style='font-weight:900;font-size:1rem;'>- 建置低耦合 POM 測試框架：</b>設計 POM 架構，減少測試耦合，提升測試模組化與可維護性。",
-                  "<b style='font-weight:900;font-size:1rem;'>- Automated CI/CD and Monitoring Integration:</b> Built automated pipelines with GitHub Actions and Jenkins, integrated Webhook, GCP, and SonarQube, improving workflow efficiency by 40% and reducing interdepartmental communication costs.\n<b style='font-weight:900;font-size:1rem;'>- Migrated to Playwright for Test Coverage Improvement:</b> Fully migrated Rapi tests to Playwright, increasing automation coverage to 60% and enhancing maintainability.\n<b style='font-weight:900;font-size:1rem;'>- Developed Low-Coupling POM Test Framework:</b> Designed a Page Object Model (POM) framework to reduce coupling, improving modularity and maintainability of test code."],
-          tags: ["Jenkins", "Playwright", "CI/CD"],
+          content:["<b style='font-weight:900;font-size:1rem;'>- 自動化測試架構：</b>從零建構 Playwright E2E 測試框架，跨多個 end point 專案落實 RWD、廣告攔截與視覺驗證，使測試覆蓋率達 97%。\n<b style='font-weight:900;font-size:1rem;'>- DevOps 與監控自動化：</b>建置 GitHub Action、Jenkins 與 Docker 流程，串接 SonarQube、Grafana 與 GCP，提升 40% 部署效率並落實視覺化監控。\n<b style='font-weight:900;font-size:1rem;'>- 效能與壓力測試：</b>運用 Postman 建立 API 規範，並導入 Puppeteer 與 k6 模擬複雜商務流程，成功建構後端系統的高併發壓力測試。",
+                  "<b style='font-weight:900;font-size:1rem;'>- Automated Testing Architecture: </b>Built a Playwright E2E testing framework from scratch; implemented RWD, ad-blocking, and visual validation across multiple endpoint projects, achieving a 97% test coverage rate.\n <b style='font-weight:900;font-size:1rem;'>- DevOps & Automated Monitoring: </b>Established GitHub Actions, Jenkins, and Docker workflows integrated with SonarQube, Grafana, and GCP, accelerating deployment efficiency by 40% and realizing comprehensive visual monitoring.\n <b style='font-weight:900;font-size:1rem;'>- Performance & Load Testing: </b>Utilized Postman to standardize API specifications; leveraged Puppeteer and k6 to simulate complex business workflows, successfully conducting high-concurrency load testing for backend systems."],
+          tags: ["Jenkins", "Playwright", "CI/CD", "Grafana"],
         },
         {
           img:"/icons/GSS.png", name:["叡揚資訊股份有限公司", "Galaxy Software Services Corporation"], title:["助理全端程式設計師", "Assistant Software Engineer"], period:"2023/01 ~ 2023/07",
           content:["<b style='font-weight:900;font-size:1rem;'>- 開發跨服務整合平台：</b>設計並實作自動流程圖介面，整合公司 SaaS 服務以及 Google 相關功能，提升自動化流程效率 40%，降低客戶手動設定時間。\n<b style='font-weight:900;font-size:1rem;'>- 串接 SHOPLINE API：</b>負責 API 串接，讓公司服務無縫連接外部電商平台，成功擴展 5+ 家合作企業，提高企業應用靈活度。\n<b style='font-weight:900;font-size:1rem;'>- 提升系統效能與維護性：</b>使用 React.js、MySQL、.NET framework 進行開發與優化",
-                  "<b style='font-weight:900;font-size:1rem;'>- Cross-Service Integration:</b> Designed an automated flowchart interface, integrating SaaS and Go Google services to boost automation by 40% and reduce setup time.\n <b style='font-weight:900;font-size:1rem;'>- SHOPLINE API Integration:</b> Led API integration, expanding partnerships with 5+ businesses and enhancing platform flexibility.\n<b style='font-weight:900;font-size:1rem;'>- System Optimization:</b> Improved performance and maintainability using React.js, MySQL, and .NET."],
+                  "<b style='font-weight:900;font-size:1rem;'>- Cross-Service Integration:</b> Designed an automated flowchart interface, integrating SaaS and Google services to boost automation by 40% and reduce setup time.\n <b style='font-weight:900;font-size:1rem;'>- SHOPLINE API Integration:</b> Led API integration, expanding partnerships with 5+ businesses and enhancing platform flexibility.\n<b style='font-weight:900;font-size:1rem;'>- System Optimization:</b> Improved performance and maintainability using React.js, MySQL, and .NET."],
           tags: [".Net Framework", "React.js", "MySQL"],
         },
       ],
       skills: [
         { title: "Language", elements: ["C/C++ Python", "javascript Go"], },
+        { title: "Security", elements: ["Kali Linux", "Burp Suite", "Wireshark", "Ghidra"], },
+        { title: "Cloud", elements: ["AWS", "GCP"], },
         { title: "Frontend", elements: ["vue.js", "React.js"], },
         { title: "Backend", elements: ["node.js", "gin", "GraphQL"], },
         { title: "Database", elements: ["MySQL", "MongoDB", "PostgreSQL"], },
-        { title: "test", elements: ["Selenium", "Playwright"], },
-        { title: "CI/CD", elements: ["Github Action", "Jenkins"], },
+        { title: "Testing", elements: ["Selenium", "Playwright", "Postman"], },
+        { title: "CI/CD", elements: ["Github Action", "Jenkins", "Grafana", "SonarQube"], },
       ],
       projects: [
+        {
+          title:["AWS 校園智慧外送儲物櫃系統", "AWS-Powered Campus Smart Delivery Locker System"], period:"2024/05~2024/06",
+          content:["<b style='font-weight:900;font-size:1rem;'>- 雲端後端與雙向通訊：</b> 整合 AWS IoT Core 與 Lambda 設計 10+ 項核心功能。\n<b style='font-weight:900;font-size:1rem;'>- 邊緣運算與高可用容錯：</b> 導入 AWS IoT Device Shadow，實現斷網下的離線驗證與開鎖容錯。\n<b style='font-weight:900;font-size:1rem;'>- 多櫃位擴充性：</b>設計具高擴充性的 GPIO 架構，可彈性支援多組置物箱，大幅提升硬體資源利用率。",
+                  "<b style='font-weight:900;font-size:1rem;'>- Cloud Backend & Bidirectional Communication:</b> Integrated AWS IoT Core and Lambda to architect and deploy over 10 core system functionalities.\n<b style='font-weight:900;font-size:1rem;'>- Edge Computing & High-Availability Fault Tolerance:</b> Implemented AWS IoT Device Shadow to enable offline verification and resilient locker-unlocking mechanisms during network disruptions.\n<b style='font-weight:900;font-size:1rem;'>- Multi-Locker Scalability:</b> Designed a highly scalable GPIO architecture to flexibly support multiple locker compartments, significantly maximizing hardware resource utilization."],
+          tags: ["AWS", "IoT", "Cloud", "Vue.js"],
+          link: "https://hackmd.io/@Beck049/BkeQuqv4R",
+        },
         {
           title:["XZ-util report", "XZ-util report"], period:"2024/05~2024/06",
           content:["<b style='font-weight:900;font-size:1rem;'>- 靜態分析惡意後門：</b>使用 Ghidra 逆向分析 liblzma5.so，透過函式交叉引用與控制流程圖 (CFG)追蹤可疑邏輯，成功識別內部修改點，還原其影響 OpenSSH 認證的行為模式。",
@@ -217,6 +226,11 @@ export default {
         { title: "Google Project Manager", link: "https://www.coursera.org/account/accomplishments/specialization/S7Q54PP7S5PR", img: "/icons/GooglePM.jpeg" },
         { title: "Google Cybersecurity", link: "https://www.coursera.org/account/accomplishments/specialization/J6QVZFU025GT", img: "/icons/GoogleCyber.jpeg" },
         { title: "Google UX Design", link: "https://www.coursera.org/account/accomplishments/specialization/ZSMQ4DER7QFS", img: "/icons/GoogleUX.jpeg" },
+        { title: "AWS Academy Graduate - Machine Learning Foundations", link: "https://www.credly.com/badges/c279c32e-7dc7-4c1a-baee-96694334c287", img: "/icons/AWS-ML.png" },
+        { title: "AWS Academy Graduate - Cloud Developing", link: "https://www.credly.com/badges/e010e9c5-c1f2-45e4-8d83-d157859e6c97", img: "/icons/AWS-Dev.png" },
+        { title: "AWS Academy Graduate - Cloud Architecting", link: "https://www.credly.com/badges/e51c19af-3815-407a-a259-bd20d3d9ebfd", img: "/icons/AWS-Arch.png" },
+        { title: "AWS Academy Graduate - Cloud Security", link: "https://www.credly.com/badges/d377cccd-5ad6-41d8-b3fd-4881b8173ba3", img: "/icons/AWS-Sec.png" },
+        { title: "Google Cybersecurity Professional Certificate", link: "https://www.credly.com/badges/dd8c7973-2554-460d-b9f6-2d57723f74a4", img: "/icons/GoogleCyberCert.png" },
       ],
       others: [
         {

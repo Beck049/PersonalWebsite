@@ -1,0 +1,1 @@
+import{_ as e,o as a,c as o,t as s}from"./index-DKYUFeaD.js";const c={props:{name:{type:String,required:!0}}},n={class:"tag-container"};function r(_,i,t,p,d,m){return a(),o("div",n,s(t.name),1)}const l=e(c,[["render",r],["__scopeId","data-v-68598c1b"]]);export{l as T};

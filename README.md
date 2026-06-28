@@ -3,5 +3,7 @@ Personal Website with Vue
 
 ## How to build
 ```sh
-npm run build
+cd Beck049
+pnpm install
+pnpm build || pnpm dev
 ```

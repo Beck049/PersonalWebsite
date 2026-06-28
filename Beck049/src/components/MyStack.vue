@@ -32,6 +32,7 @@
           <h4>Service</h4>
           <p><span class="text-accent"> → </span>Full Stack Development</p>
           <p><span class="text-accent"> → </span>Web Design & Development</p>
+          <p><span class="text-accent"> → </span>Cloud Architecture</p>
           <p><span class="text-accent"> → </span>Cybersecurity Related</p>
         </div>
       </div>
@@ -79,6 +80,7 @@ const technologies = [
   { name: "burpSuite", src: "/icons/tools/burpSuite.png" },
   { name: "Jenkins", src: "/icons/tools/jenkins.png" },
   { name: "Playwright", src: "/icons/tools/Playwright.png" },
+  { name: "grafana", src: "/icons/tools/grafana.png" },
 ];
 
 const setFloat = () => {
